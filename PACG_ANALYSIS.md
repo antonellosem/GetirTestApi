@@ -18,4 +18,5 @@ and .NET Framework 4.7.2. Refactoring is needed to move towards a modern,
 maintainable architecture.
 
 This repository keeps the original Pacg sources untouched for reference during
-the refactoring effort.
+the refactoring effort. Detailed module analysis can be found in
+[`NewPacg/PACG_ANALYSIS.md`](NewPacg/PACG_ANALYSIS.md).
