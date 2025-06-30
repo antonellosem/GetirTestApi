@@ -1,0 +1,21 @@
+bin/
+obj/
+*.user
+*.rsuser
+*.suo
+*.cache
+*.pdb
+*.db
+*.log
+*.lock.json
+*.nupkg
+*.snk
+*.swp
+.vscode/
+/tmp/
+# dotnet artifacts
+**/bin/
+**/obj/
+# ignore local install script
+/dotnet-install.sh
+dotnet/
