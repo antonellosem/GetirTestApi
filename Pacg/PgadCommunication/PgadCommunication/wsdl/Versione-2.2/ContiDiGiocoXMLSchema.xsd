@@ -1,0 +1,5507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema targetNamespace="http://model.ws.contidigioco.sogei.it" elementFormDefault="qualified" xmlns:tns="http://model.ws.contidigioco.sogei.it" xmlns="http://www.w3.org/2001/XMLSchema">
+
+<element type="tns:AperturaContoPersonaFisicaRequest" name="aperturaContoPersonaFisicaIn"/>
+
+<element type="tns:AperturaContoPersonaFisicaResponse" name="aperturaContoPersonaFisicaOut"/>
+
+<element type="tns:AperturaContoPersonaGiuridicaRequest" name="aperturaContoPersonaGiuridicaIn"/>
+
+<element type="tns:AperturaContoPersonaGiuridicaResponse" name="aperturaContoPersonaGiuridicaOut"/>
+
+<element type="tns:MovimentazioneContoRequest" name="movimentazioneContoIn"/>
+
+<element type="tns:MovimentazioneContoResponse" name="movimentazioneContoOut"/>
+
+<element type="tns:MovimentazioneBonusContoRequest" name="movimentazioneBonusContoIn"/>
+
+<element type="tns:MovimentazioneBonusContoResponse" name="movimentazioneBonusContoOut"/>
+
+<element type="tns:CambioStatoContoRequest" name="cambioStatoContoIn"/>
+
+<element type="tns:CambioStatoContoResponse" name="cambioStatoContoOut"/>
+
+<element type="tns:SaldoContoRequest" name="saldoContoIn"/>
+
+<element type="tns:SaldoContoResponse" name="saldoContoOut"/>
+
+<element type="tns:ModificaProvinciaResidenzaContoRequest" name="modificaProvinciaResidenzaContoIn"/>
+
+<element type="tns:ModificaProvinciaResidenzaContoResponse" name="modificaProvinciaResidenzaContoOut"/>
+
+<element type="tns:InterrogazioneStatoContoRequest" name="interrogazioneStatoContoIn"/>
+
+<element type="tns:InterrogazioneStatoContoResponse" name="interrogazioneStatoContoOut"/>
+
+<element type="tns:SubregistrazioneRequest" name="subregistrazioneIn"/>
+
+<element type="tns:SubregistrazioneResponse" name="subregistrazioneOut"/>
+
+<element type="tns:aggiornaDatiDocumentoTitolareContoRequest" name="aggiornaDatiDocumentoTitolareContoIn"/>
+
+<element type="tns:aggiornaDatiDocumentoTitolareContoResponse" name="aggiornaDatiDocumentoTitolareContoOut"/>
+
+<element type="tns:MigrazioneContoRequest" name="migrazioneContoIn"/>
+
+<element type="tns:MigrazioneContoResponse" name="migrazioneContoOut"/>
+
+<element type="tns:RiepilogoOperazioniMovimentazioneRequest" name="riepilogoOperazioniMovimentazioneIn"/>
+
+<element type="tns:RiepilogoOperazioniMovimentazioneResponse" name="riepilogoOperazioniMovimentazioneOut"/>
+
+<element type="tns:RiepilogoOperazioniServizioRequest" name="riepilogoOperazioniServizioIn"/>
+
+<element type="tns:RiepilogoOperazioniServizioResponse" name="riepilogoOperazioniServizioOut"/>
+
+<element type="tns:StornoMovimentazioneContoRequest" name="stornoMovimentazioneContoIn"/>
+
+<element type="tns:StornoMovimentazioneContoResponse" name="stornoMovimentazioneContoOut"/>
+
+<element type="tns:Subregistrazione2Request" name="subregistrazione2In"/>
+
+<element type="tns:Subregistrazione2Response" name="subregistrazione2Out"/>
+
+<element type="tns:AperturaSemplificataContoPersonaFisicaRequest" name="aperturaSemplificataContoPersonaFisicaIn"/>
+
+<element type="tns:AperturaSemplificataContoPersonaFisicaResponse" name="aperturaSemplificataContoPersonaFisicaOut"/>
+
+<element type="tns:IntegrazioneAperturaSemplificataContoPersonaFisicaRequest" name="integrazioneAperturaSemplificataContoPersonaFisicaIn"/>
+
+<element type="tns:IntegrazioneAperturaSemplificataContoPersonaFisicaResponse" name="integrazioneAperturaSemplificataContoPersonaFisicaOut"/>
+
+<element type="tns:ElencoContiSenzaSubregistrazioneRequest" name="elencoContiSenzaSubregistrazioneIn"/>
+
+<element type="tns:ElencoContiSenzaSubregistrazioneResponse" name="elencoContiSenzaSubregistrazioneOut"/>
+
+<element type="tns:ContoDormienteRequest" name="contoDormienteIn"/>
+
+<element type="tns:ContoDormienteResponse" name="contoDormienteOut"/>
+
+<element type="tns:ElencoContiDormientiRequest" name="elencoContiDormientiIn"/>
+
+<element type="tns:ElencoContiDormientiResponse" name="elencoContiDormientiOut"/>
+
+<element type="tns:InterrogazioneEstremiDocumentoRequest" name="interrogazioneEstremiDocumentoIn"/>
+
+<element type="tns:InterrogazioneEstremiDocumentoResponse" name="interrogazioneEstremiDocumentoOut"/>
+
+<element type="tns:AggiornaLimiteRequest" name="aggiornaLimiteIn"/>
+
+<element type="tns:AggiornaLimiteResponse" name="aggiornaLimiteOut"/>
+
+<element type="tns:InterrogazioneLimitiRequest" name="interrogazioneLimitiIn"/>
+
+<element type="tns:InterrogazioneLimitiResponse" name="interrogazioneLimitiOut"/>
+
+<element type="tns:GestioneAutoesclusioneTrasversaleRequest" name="gestioneAutoesclusioneTrasversaleIn"/>
+
+<element type="tns:GestioneAutoesclusioneTrasversaleResponse" name="gestioneAutoesclusioneTrasversaleOut"/>
+
+<element type="tns:ElencoContiAutoesclusiRequest" name="elencoContiAutoesclusiIn"/>
+
+<element type="tns:ElencoContiAutoesclusiResponse" name="elencoContiAutoesclusiOut"/>
+
+<element type="tns:AperturaContoPersonaFisica2Request" name="aperturaContoPersonaFisica2In"/>
+
+<element type="tns:AperturaContoPersonaFisica2Response" name="aperturaContoPersonaFisica2Out"/>
+
+<element type="tns:AperturaSemplificataContoPersonaFisica2Request" name="aperturaSemplificataContoPersonaFisica2In"/>
+
+<element type="tns:AperturaSemplificataContoPersonaFisica2Response" name="aperturaSemplificataContoPersonaFisica2Out"/>
+
+<element type="tns:IntegrazioneAperturaSemplificataContoPersonaFisica2Request" name="integrazioneAperturaSemplificataContoPersonaFisica2In"/>
+
+<element type="tns:IntegrazioneAperturaSemplificataContoPersonaFisica2Response" name="integrazioneAperturaSemplificataContoPersonaFisica2Out"/>
+
+<element type="tns:InterrogazioneSoggettoAutoesclusoRequest" name="interrogazioneSoggettoAutoesclusoIn"/>
+
+<element type="tns:InterrogazioneSoggettoAutoesclusoResponse" name="interrogazioneSoggettoAutoesclusoOut"/>
+
+<element type="tns:AggiornaPseudonimoContoRequest" name="aggiornaPseudonimoContoIn"/>
+
+<element type="tns:AggiornaPseudonimoContoResponse" name="aggiornaPseudonimoContoOut"/>
+
+<element type="tns:AggiornaPostaElettronicaContoRequest" name="aggiornaPostaElettronicaContoIn"/>
+
+<element type="tns:AggiornaPostaElettronicaContoResponse" name="aggiornaPostaElettronicaContoOut"/>
+
+<element type="tns:InterrogazioneStoriaSoggettoAutoesclusoRequest" name="interrogazioneStoriaSoggettoAutoesclusoIn"/>
+
+<element type="tns:InterrogazioneStoriaSoggettoAutoesclusoResponse" name="interrogazioneStoriaSoggettoAutoesclusoOut"/>
+
+<element type="tns:InterrogazioneProvinciaResidenzaContoRequest" name="interrogazioneProvinciaResidenzaContoIn"/>
+
+<element type="tns:InterrogazioneProvinciaResidenzaContoResponse" name="interrogazioneProvinciaResidenzaContoOut"/>
+
+<element type="tns:InterrogazionePseudonimoContoRequest" name="interrogazionePseudonimoContoIn"/>
+
+<element type="tns:InterrogazionePseudonimoContoResponse" name="interrogazionePseudonimoContoOut"/>
+
+<element type="tns:InterrogazionePostaElettronicaContoRequest" name="interrogazionePostaElettronicaContoIn"/>
+
+<element type="tns:InterrogazionePostaElettronicaContoResponse" name="interrogazionePostaElettronicaContoOut"/>
+
+<!-- STRUTTURE DATI -->
+
+
+
+<complexType name="Data">
+
+
+<sequence>
+
+
+<element name="giorno">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<length value="2"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="mese">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<length value="2"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="anno">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<length value="4"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="Ora">
+
+
+<sequence>
+
+
+<element name="ore">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<length value="2"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="minuti">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<length value="2"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="secondi">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<length value="2"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="DataOra">
+
+
+<sequence>
+
+<element type="tns:Data" name="data"/>
+
+<element type="tns:Ora" name="ora"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="DatiNascita">
+
+
+<sequence>
+
+<element type="tns:Data" name="data"/>
+
+
+<element name="comune">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="provincia">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<length value="2"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="Residenza">
+
+
+<sequence>
+
+
+<element name="indirizzo">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="250"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="comune">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="provincia">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<length value="2"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="cap">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<length value="5"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="Documento">
+
+
+<sequence>
+
+<element type="byte" name="tipo"/>
+
+
+<element name="numero">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:Data" name="dataRilascio"/>
+
+
+<element name="autoritaRilascio">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="localitaRilascio">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="PersonaFisica">
+
+
+<sequence>
+
+
+<element name="codiceFiscale">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<whiteSpace value="collapse"/>
+
+<length value="16"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="cognome">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="nome">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="sesso">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<enumeration value="M"/>
+
+<enumeration value="F"/>
+
+<length value="1"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DatiNascita" name="nascita"/>
+
+<element type="tns:Residenza" name="residenza"/>
+
+<element type="tns:Documento" name="documento"/>
+
+
+<element name="postaElettronica">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="pseudonimo">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="PersonaGiuridica">
+
+
+<sequence>
+
+
+<element name="partitaIva">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<length value="11"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="ragioneSociale">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:Residenza" name="sede"/>
+
+
+<element name="postaElettronica">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="pseudonimo">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="DettaglioBonus">
+
+
+<sequence>
+
+<element type="byte" name="famigliaGioco"/>
+
+<element type="byte" name="tipoGioco"/>
+
+<element type="int" name="importo"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="DettaglioOperazioniMovimentazione">
+
+
+<sequence>
+
+<element type="byte" name="causaleMovimento"/>
+
+<element type="int" name="numeroOperazioni"/>
+
+<element type="long" name="totaleImporto"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="DettaglioOperazioniServizio">
+
+
+<sequence>
+
+<element type="byte" name="causaleServizio"/>
+
+<element type="int" name="numeroOperazioni"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="DettaglioConti">
+
+
+<sequence>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="int" name="importoSaldo"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="PersonaFisicaSemplificata">
+
+
+<sequence>
+
+
+<element name="codiceFiscale">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<whiteSpace value="collapse"/>
+
+<length value="16"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="cognome">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="nome">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="sesso">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<enumeration value="M"/>
+
+<enumeration value="F"/>
+
+<length value="1"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DatiNascita" name="nascita"/>
+
+
+<element name="provResid">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<length value="2"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="Limite">
+
+
+<sequence>
+
+<element type="byte" name="tipoLimite"/>
+
+<element type="int" name="importo"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="DettaglioContiAutoesclusi">
+
+
+<sequence>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="byte" name="tipoAutoesclusione"/>
+
+<element type="tns:DataOra" name="dataInizio"/>
+
+<element type="tns:DataOra" name="dataFine" maxOccurs="1" minOccurs="0"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="DettaglioSoggettoAutoescluso">
+
+
+<sequence>
+
+<element type="byte" name="tipoAutoesclusione"/>
+
+<element type="tns:DataOra" name="dataInizio"/>
+
+<element type="tns:DataOra" name="dataFine" maxOccurs="1" minOccurs="0"/>
+
+</sequence>
+
+</complexType>
+
+<!-- MESSAGGI -->
+
+
+
+<complexType name="AperturaContoPersonaFisicaRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:PersonaFisica" name="titolareConto"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AperturaContoPersonaFisicaRequest">
+
+
+<sequence>
+
+<element type="tns:AperturaContoPersonaFisicaRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AperturaContoPersonaFisicaResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AperturaContoPersonaFisicaResponse">
+
+
+<sequence>
+
+<element type="tns:AperturaContoPersonaFisicaResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AperturaContoPersonaGiuridicaRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:PersonaGiuridica" name="titolareConto"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AperturaContoPersonaGiuridicaRequest">
+
+
+<sequence>
+
+<element type="tns:AperturaContoPersonaGiuridicaRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AperturaContoPersonaGiuridicaResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AperturaContoPersonaGiuridicaResponse">
+
+
+<sequence>
+
+<element type="tns:AperturaContoPersonaGiuridicaResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="MovimentazioneContoRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="byte" name="mezzoDiPagamento"/>
+
+<element type="byte" name="causaleMovimento"/>
+
+<element type="int" name="importoMovimento"/>
+
+<element type="int" name="importoSaldo"/>
+
+<element type="tns:DataOra" name="dataOraSaldo"/>
+
+<element type="int" name="importoBonusSaldo"/>
+
+<element type="byte" name="numDettagliBonusSaldo"/>
+
+<element type="tns:DettaglioBonus" name="dettaglioBonusSaldo" maxOccurs="unbounded" minOccurs="0"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="MovimentazioneContoRequest">
+
+
+<sequence>
+
+<element type="tns:MovimentazioneContoRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="MovimentazioneContoResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="MovimentazioneContoResponse">
+
+
+<sequence>
+
+<element type="tns:MovimentazioneContoResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="MovimentazioneBonusContoRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="byte" name="causaleMovimento"/>
+
+<element type="int" name="importoBonus"/>
+
+<element type="byte" name="numDettagliBonus"/>
+
+<element type="tns:DettaglioBonus" name="dettaglioBonus" maxOccurs="unbounded" minOccurs="1"/>
+
+<element type="int" name="importoSaldo"/>
+
+<element type="tns:DataOra" name="dataOraSaldo"/>
+
+<element type="int" name="importoBonusSaldo"/>
+
+<element type="byte" name="numDettagliBonusSaldo"/>
+
+<element type="tns:DettaglioBonus" name="dettaglioBonusSaldo" maxOccurs="unbounded" minOccurs="0"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="MovimentazioneBonusContoRequest">
+
+
+<sequence>
+
+<element type="tns:MovimentazioneBonusContoRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="MovimentazioneBonusContoResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="MovimentazioneBonusContoResponse">
+
+
+<sequence>
+
+<element type="tns:MovimentazioneBonusContoResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="CambioStatoContoRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="byte" name="stato"/>
+
+<element type="byte" name="causale"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="CambioStatoContoRequest">
+
+
+<sequence>
+
+<element type="tns:CambioStatoContoRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="CambioStatoContoResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="CambioStatoContoResponse">
+
+
+<sequence>
+
+<element type="tns:CambioStatoContoResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="SaldoContoRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="int" name="importoSaldo"/>
+
+<element type="tns:DataOra" name="dataOraSaldo"/>
+
+<element type="int" name="importoBonusSaldo"/>
+
+<element type="byte" name="numDettagliBonusSaldo"/>
+
+<element type="tns:DettaglioBonus" name="dettaglioBonusSaldo" maxOccurs="unbounded" minOccurs="0"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="SaldoContoRequest">
+
+
+<sequence>
+
+<element type="tns:SaldoContoRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="SaldoContoResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="SaldoContoResponse">
+
+
+<sequence>
+
+<element type="tns:SaldoContoResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="ModificaProvinciaResidenzaContoRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="provincia">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<length value="2"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="ModificaProvinciaResidenzaContoRequest">
+
+
+<sequence>
+
+<element type="tns:ModificaProvinciaResidenzaContoRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="ModificaProvinciaResidenzaContoResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="ModificaProvinciaResidenzaContoResponse">
+
+
+<sequence>
+
+<element type="tns:ModificaProvinciaResidenzaContoResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazioneStatoContoRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazioneStatoContoRequest">
+
+
+<sequence>
+
+<element type="tns:InterrogazioneStatoContoRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazioneStatoContoResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="byte" name="stato"/>
+
+<element type="byte" name="causale"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazioneStatoContoResponse">
+
+
+<sequence>
+
+<element type="tns:InterrogazioneStatoContoResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="SubregistrazioneRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="SubregistrazioneRequest">
+
+
+<sequence>
+
+<element type="tns:SubregistrazioneRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="SubregistrazioneResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="SubregistrazioneResponse">
+
+
+<sequence>
+
+<element type="tns:SubregistrazioneResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="aggiornaDatiDocumentoTitolareContoRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:Documento" name="documento"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="aggiornaDatiDocumentoTitolareContoRequest">
+
+
+<sequence>
+
+<element type="tns:aggiornaDatiDocumentoTitolareContoRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="aggiornaDatiDocumentoTitolareContoResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="aggiornaDatiDocumentoTitolareContoResponse">
+
+
+<sequence>
+
+<element type="tns:aggiornaDatiDocumentoTitolareContoResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="MigrazioneContoRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteContoOriginario"/>
+
+<element type="long" name="idCnContoOriginario"/>
+
+
+<element name="codiceContoOriginario">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="byte" name="idReteContoDestinazione"/>
+
+<element type="long" name="idCnContoDestinazione"/>
+
+
+<element name="codiceContoDestinazione">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="codiceFiscale">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<whiteSpace value="collapse"/>
+
+<length value="16"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="int" name="importoSaldo"/>
+
+<element type="tns:DataOra" name="dataOraSaldo"/>
+
+<element type="int" name="importoBonusSaldo"/>
+
+<element type="byte" name="numDettagliBonusSaldo"/>
+
+<element type="tns:DettaglioBonus" name="dettaglioBonusSaldo" maxOccurs="unbounded" minOccurs="0"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="MigrazioneContoRequest">
+
+
+<sequence>
+
+<element type="tns:MigrazioneContoRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="MigrazioneContoResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="MigrazioneContoResponse">
+
+
+<sequence>
+
+<element type="tns:MigrazioneContoResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="RiepilogoOperazioniMovimentazioneRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+<element type="tns:Data" name="data"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="RiepilogoOperazioniMovimentazioneRequest">
+
+
+<sequence>
+
+<element type="tns:RiepilogoOperazioniMovimentazioneRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="RiepilogoOperazioniMovimentazioneResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+<element type="tns:Data" name="data"/>
+
+<element type="byte" name="numDettagliOperazioniMovimentazione"/>
+
+<element type="tns:DettaglioOperazioniMovimentazione" name="dettaglioOperazioniMovimentazione" maxOccurs="unbounded" minOccurs="0"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="RiepilogoOperazioniMovimentazioneResponse">
+
+
+<sequence>
+
+<element type="tns:RiepilogoOperazioniMovimentazioneResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="RiepilogoOperazioniServizioRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+<element type="tns:Data" name="data"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="RiepilogoOperazioniServizioRequest">
+
+
+<sequence>
+
+<element type="tns:RiepilogoOperazioniServizioRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="RiepilogoOperazioniServizioResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+<element type="tns:Data" name="data"/>
+
+<element type="byte" name="numDettagliOperazioniServizio"/>
+
+<element type="tns:DettaglioOperazioniServizio" name="dettaglioOperazioniServizio" maxOccurs="unbounded" minOccurs="0"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="RiepilogoOperazioniServizioResponse">
+
+
+<sequence>
+
+<element type="tns:RiepilogoOperazioniServizioResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="StornoMovimentazioneContoRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="idMovDaStornare">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<length value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="byte" name="mezzoDiPagamento"/>
+
+<element type="byte" name="causaleMovimento"/>
+
+<element type="byte" name="tipoStorno"/>
+
+<element type="int" name="importoMovimento"/>
+
+<element type="int" name="importoSaldo"/>
+
+<element type="tns:DataOra" name="dataOraSaldo"/>
+
+<element type="int" name="importoBonusSaldo"/>
+
+<element type="byte" name="numDettagliBonusSaldo"/>
+
+<element type="tns:DettaglioBonus" name="dettaglioBonusSaldo" maxOccurs="unbounded" minOccurs="0"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="StornoMovimentazioneContoRequest">
+
+
+<sequence>
+
+<element type="tns:StornoMovimentazioneContoRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="StornoMovimentazioneContoResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="StornoMovimentazioneContoResponse">
+
+
+<sequence>
+
+<element type="tns:StornoMovimentazioneContoResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- NUOVI MESSAGGI -->
+
+
+<!-- SUBREGISTRAZIONE 2 -->
+
+
+
+<complexType name="Subregistrazione2RequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="int" name="importoSaldo"/>
+
+<element type="int" name="importoBonusSaldo"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="Subregistrazione2Request">
+
+
+<sequence>
+
+<element type="tns:Subregistrazione2RequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="Subregistrazione2ResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="Subregistrazione2Response">
+
+
+<sequence>
+
+<element type="tns:Subregistrazione2ResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- APERTURA SEMPLIFICATA CONTO PERSONA FISICA -->
+
+
+
+<complexType name="AperturaSemplificataContoPersonaFisicaRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:PersonaFisicaSemplificata" name="titolareConto"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AperturaSemplificataContoPersonaFisicaRequest">
+
+
+<sequence>
+
+<element type="tns:AperturaSemplificataContoPersonaFisicaRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AperturaSemplificataContoPersonaFisicaResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AperturaSemplificataContoPersonaFisicaResponse">
+
+
+<sequence>
+
+<element type="tns:AperturaSemplificataContoPersonaFisicaResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- INTEGRAZIONE APERTURA CONTO PERSONA FISICA MOBILE -->
+
+
+
+<complexType name="IntegrazioneAperturaSemplificataContoPersonaFisicaRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="codiceFiscale">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<whiteSpace value="collapse"/>
+
+<length value="16"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:Residenza" name="residenza"/>
+
+<element type="tns:Documento" name="documento"/>
+
+
+<element name="postaElettronica">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="pseudonimo">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="IntegrazioneAperturaSemplificataContoPersonaFisicaRequest">
+
+
+<sequence>
+
+<element type="tns:IntegrazioneAperturaSemplificataContoPersonaFisicaRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="IntegrazioneAperturaSemplificataContoPersonaFisicaResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="IntegrazioneAperturaSemplificataContoPersonaFisicaResponse">
+
+
+<sequence>
+
+<element type="tns:IntegrazioneAperturaSemplificataContoPersonaFisicaResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- ELENCO CONTI SENZA SUBREGISTRAZIONE -->
+
+
+
+<complexType name="ElencoContiSenzaSubregistrazioneRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="tns:Data" name="dataRichiesta"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+<element type="byte" name="stato"/>
+
+<element type="short" name="inizio"/>
+
+<element type="short" name="fine"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="ElencoContiSenzaSubregistrazioneRequest">
+
+
+<sequence>
+
+<element type="tns:ElencoContiSenzaSubregistrazioneRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="ElencoContiSenzaSubregistrazioneResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+<element type="byte" name="numeroDettagliConti"/>
+
+<element type="tns:DettaglioConti" name="dettaglioConti" maxOccurs="unbounded" minOccurs="0"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="ElencoContiSenzaSubregistrazioneResponse">
+
+
+<sequence>
+
+<element type="tns:ElencoContiSenzaSubregistrazioneResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- CONTO DI GIOCO DORMIENTE -->
+
+
+
+<complexType name="ContoDormienteRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="tns:Data" name="dataDormiente"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="int" name="importoSaldo"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="ContoDormienteRequest">
+
+
+<sequence>
+
+<element type="tns:ContoDormienteRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="ContoDormienteResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="ContoDormienteResponse">
+
+
+<sequence>
+
+<element type="tns:ContoDormienteResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- ELENCO CONTI DI GIOCO DORMIENTE -->
+
+
+
+<complexType name="ElencoContiDormientiRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="tns:Data" name="dataRichiesta"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+<element type="short" name="inizio"/>
+
+<element type="short" name="fine"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="ElencoContiDormientiRequest">
+
+
+<sequence>
+
+<element type="tns:ElencoContiDormientiRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="ElencoContiDormientiResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+<element type="byte" name="numeroDettagliConti"/>
+
+<element type="tns:DettaglioConti" name="dettaglioConti" maxOccurs="unbounded" minOccurs="0"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="ElencoContiDormientiResponse">
+
+
+<sequence>
+
+<element type="tns:ElencoContiDormientiResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- INTERROGAZIONE DATI DOCUMENTO TITOLARE CONTO DI GIOCO -->
+
+
+
+<complexType name="InterrogazioneEstremiDocumentoRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazioneEstremiDocumentoRequest">
+
+
+<sequence>
+
+<element type="tns:InterrogazioneEstremiDocumentoRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazioneEstremiDocumentoResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="byte" name="numDocumenti"/>
+
+<element type="tns:Documento" name="documento" maxOccurs="1" minOccurs="0"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazioneEstremiDocumentoResponse">
+
+
+<sequence>
+
+<element type="tns:InterrogazioneEstremiDocumentoResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- AGGIORNA LIMITE CONTO DI GIOCO -->
+
+
+
+<complexType name="AggiornaLimiteRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="byte" name="gestioneLimite"/>
+
+<element type="tns:Limite" name="limite"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AggiornaLimiteRequest">
+
+
+<sequence>
+
+<element type="tns:AggiornaLimiteRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AggiornaLimiteResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AggiornaLimiteResponse">
+
+
+<sequence>
+
+<element type="tns:AggiornaLimiteResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- INTERROGAZIONE LIMITE CONTO DI GIOCO -->
+
+
+
+<complexType name="InterrogazioneLimitiRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazioneLimitiRequest">
+
+
+<sequence>
+
+<element type="tns:InterrogazioneLimitiRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazioneLimitiResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="byte" name="numeroLimiti"/>
+
+<element type="tns:Limite" name="limite" maxOccurs="unbounded" minOccurs="0"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazioneLimitiResponse">
+
+
+<sequence>
+
+<element type="tns:InterrogazioneLimitiResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- GESTIONE AUTOESCLUSIONE TRASVERSALE -->
+
+
+
+<complexType name="GestioneAutoesclusioneTrasversaleRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="codiceFiscale">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<whiteSpace value="collapse"/>
+
+<length value="16"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="byte" name="gestioneAutoesclusione"/>
+
+<element type="byte" name="tipoAutoesclusione"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="GestioneAutoesclusioneTrasversaleRequest">
+
+
+<sequence>
+
+<element type="tns:GestioneAutoesclusioneTrasversaleRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="GestioneAutoesclusioneTrasversaleResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="GestioneAutoesclusioneTrasversaleResponse">
+
+
+<sequence>
+
+<element type="tns:GestioneAutoesclusioneTrasversaleResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- ELENCO CONTI DI GIOCO AUTOESCLUSI -->
+
+
+
+<complexType name="ElencoContiAutoesclusiRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+<element type="short" name="inizio"/>
+
+<element type="short" name="fine"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="ElencoContiAutoesclusiRequest">
+
+
+<sequence>
+
+<element type="tns:ElencoContiAutoesclusiRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="ElencoContiAutoesclusiResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+<element type="byte" name="numeroDettagliContiAutoesclusi"/>
+
+<element type="tns:DettaglioContiAutoesclusi" name="dettaglioContiAutoesclusi" maxOccurs="unbounded" minOccurs="0"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="ElencoContiAutoesclusiResponse">
+
+
+<sequence>
+
+<element type="tns:ElencoContiAutoesclusiResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- APERTURA CONTO DI GIOCO PERSONA FISICA 2 -->
+
+
+
+<complexType name="AperturaContoPersonaFisica2RequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:PersonaFisica" name="titolareConto"/>
+
+<element type="byte" name="numeroLimiti"/>
+
+<element type="tns:Limite" name="limite" maxOccurs="unbounded" minOccurs="1"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AperturaContoPersonaFisica2Request">
+
+
+<sequence>
+
+<element type="tns:AperturaContoPersonaFisica2RequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AperturaContoPersonaFisica2ResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AperturaContoPersonaFisica2Response">
+
+
+<sequence>
+
+<element type="tns:AperturaContoPersonaFisica2ResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- APERTURA SEMPLIFICATA CONTO PERSONA FISICA 2 -->
+
+
+
+<complexType name="AperturaSemplificataContoPersonaFisica2RequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:PersonaFisicaSemplificata" name="titolareConto"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AperturaSemplificataContoPersonaFisica2Request">
+
+
+<sequence>
+
+<element type="tns:AperturaSemplificataContoPersonaFisica2RequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AperturaSemplificataContoPersonaFisica2ResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AperturaSemplificataContoPersonaFisica2Response">
+
+
+<sequence>
+
+<element type="tns:AperturaSemplificataContoPersonaFisica2ResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- INTEGRAZIONE APERTURA CONTO PERSONA FISICA 2 -->
+
+
+
+<complexType name="IntegrazioneAperturaSemplificataContoPersonaFisica2RequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="codiceFiscale">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<whiteSpace value="collapse"/>
+
+<length value="16"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:Residenza" name="residenza"/>
+
+<element type="tns:Documento" name="documento"/>
+
+
+<element name="postaElettronica">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="pseudonimo">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="byte" name="numeroLimiti"/>
+
+<element type="tns:Limite" name="limite" maxOccurs="unbounded" minOccurs="1"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="IntegrazioneAperturaSemplificataContoPersonaFisica2Request">
+
+
+<sequence>
+
+<element type="tns:IntegrazioneAperturaSemplificataContoPersonaFisica2RequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="IntegrazioneAperturaSemplificataContoPersonaFisica2ResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="IntegrazioneAperturaSemplificataContoPersonaFisica2Response">
+
+
+<sequence>
+
+<element type="tns:IntegrazioneAperturaSemplificataContoPersonaFisica2ResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- INTERROGAZIONE SOGGETTO AUTOESCLUSO -->
+
+
+
+<complexType name="InterrogazioneSoggettoAutoesclusoRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="codiceFiscale">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<whiteSpace value="collapse"/>
+
+<length value="16"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazioneSoggettoAutoesclusoRequest">
+
+
+<sequence>
+
+<element type="tns:InterrogazioneSoggettoAutoesclusoRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazioneSoggettoAutoesclusoResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+<element type="byte" name="numeroDettagliSoggettoAutoescluso"/>
+
+<element type="tns:DettaglioSoggettoAutoescluso" name="dettaglioSoggettoAutoescluso" maxOccurs="1" minOccurs="0"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazioneSoggettoAutoesclusoResponse">
+
+
+<sequence>
+
+<element type="tns:InterrogazioneSoggettoAutoesclusoResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- AGGIORNA PSEUDONIMO CONTO DI GIOCO -->
+
+
+
+<complexType name="AggiornaPseudonimoContoRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="pseudonimo">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AggiornaPseudonimoContoRequest">
+
+
+<sequence>
+
+<element type="tns:AggiornaPseudonimoContoRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AggiornaPseudonimoContoResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AggiornaPseudonimoContoResponse">
+
+
+<sequence>
+
+<element type="tns:AggiornaPseudonimoContoResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- AGGIORNA POSTA ELETTRONICA CONTO DI GIOCO -->
+
+
+
+<complexType name="AggiornaPostaElettronicaContoRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="postaElettronica">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AggiornaPostaElettronicaContoRequest">
+
+
+<sequence>
+
+<element type="tns:AggiornaPostaElettronicaContoRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AggiornaPostaElettronicaContoResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="AggiornaPostaElettronicaContoResponse">
+
+
+<sequence>
+
+<element type="tns:AggiornaPostaElettronicaContoResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- INTERROGAZIONE STORIA SOGGETTO AUTOESCLUSO -->
+
+
+
+<complexType name="InterrogazioneStoriaSoggettoAutoesclusoRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="codiceFiscale">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<whiteSpace value="collapse"/>
+
+<length value="16"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazioneStoriaSoggettoAutoesclusoRequest">
+
+
+<sequence>
+
+<element type="tns:InterrogazioneStoriaSoggettoAutoesclusoRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazioneStoriaSoggettoAutoesclusoResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+<element type="short" name="numeroDettagliSoggettoAutoescluso"/>
+
+<element type="tns:DettaglioSoggettoAutoescluso" name="dettaglioSoggettoAutoescluso" maxOccurs="unbounded" minOccurs="0"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazioneStoriaSoggettoAutoesclusoResponse">
+
+
+<sequence>
+
+<element type="tns:InterrogazioneStoriaSoggettoAutoesclusoResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- INTERROGAZIONE PROVINCIA RESIDENZA CONTO -->
+
+
+
+<complexType name="InterrogazioneProvinciaResidenzaContoRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazioneProvinciaResidenzaContoRequest">
+
+
+<sequence>
+
+<element type="tns:InterrogazioneProvinciaResidenzaContoRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazioneProvinciaResidenzaContoResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="provincia">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="2"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazioneProvinciaResidenzaContoResponse">
+
+
+<sequence>
+
+<element type="tns:InterrogazioneProvinciaResidenzaContoResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- INTERROGAZIONE PSEUDONIMO CONTO -->
+
+
+
+<complexType name="InterrogazionePseudonimoContoRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazionePseudonimoContoRequest">
+
+
+<sequence>
+
+<element type="tns:InterrogazionePseudonimoContoRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazionePseudonimoContoResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="pseudonimo">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazionePseudonimoContoResponse">
+
+
+<sequence>
+
+<element type="tns:InterrogazionePseudonimoContoResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+<!-- INTERROGAZIONE POSTA ELETTRONICA CONTO -->
+
+
+
+<complexType name="InterrogazionePostaElettronicaContoRequestElements">
+
+
+<sequence>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazionePostaElettronicaContoRequest">
+
+
+<sequence>
+
+<element type="tns:InterrogazionePostaElettronicaContoRequestElements" name="requestElements"/>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazionePostaElettronicaContoResponseElements">
+
+
+<sequence>
+
+<element type="short" name="esitoRichiesta"/>
+
+<element type="short" name="idFsc"/>
+
+<element type="byte" name="idRete"/>
+
+<element type="long" name="idCn"/>
+
+<element type="long" name="idTransazione"/>
+
+
+<element name="idRicevuta">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="25"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+<element type="tns:DataOra" name="timeStamp"/>
+
+<element type="byte" name="idReteConto"/>
+
+<element type="long" name="idCnConto"/>
+
+
+<element name="codiceConto">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="1"/>
+
+<maxLength value="20"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+
+<element name="postaElettronica">
+
+
+<simpleType>
+
+
+<restriction base="string">
+
+<minLength value="0"/>
+
+<maxLength value="100"/>
+
+<whiteSpace value="collapse"/>
+
+</restriction>
+
+</simpleType>
+
+</element>
+
+</sequence>
+
+</complexType>
+
+
+<complexType name="InterrogazionePostaElettronicaContoResponse">
+
+
+<sequence>
+
+<element type="tns:InterrogazionePostaElettronicaContoResponseElements" name="responseElements"/>
+
+</sequence>
+
+</complexType>
+
+</schema>

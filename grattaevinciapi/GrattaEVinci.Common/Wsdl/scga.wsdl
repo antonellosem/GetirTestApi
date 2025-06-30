@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://ws.lottomatica.scga.it/types" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://ws.lottomatica.scga.it" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RegistraContoGiocoService" targetNamespace="http://ws.lottomatica.scga.it">
+   <types>
+      <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:soap11enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://ws.lottomatica.scga.it/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://ws.lottomatica.scga.it/types">
+         <complexType name="RegistraContoGiocoResponse">
+            <sequence>
+               <element name="codiceRisultato" nillable="true" type="string" />
+               <element name="datiFirmati" nillable="true" type="string" />
+               <element name="descrizioneRisultato" nillable="true" type="string" />
+               <element name="firma" nillable="true" type="string" />
+            </sequence>
+         </complexType>
+      </schema>
+   </types>
+   <message name="RegistraContoGioco_registraContoGiocoResponse">
+      <part name="result" type="ns1:RegistraContoGiocoResponse" />
+   </message>
+   <message name="RegistraContoGioco_registraContoGioco">
+      <part name="String_1" type="xsd:string" />
+      <part name="String_2" type="xsd:string" />
+      <part name="String_3" type="xsd:string" />
+      <part name="String_4" type="xsd:string" />
+      <part name="String_5" type="xsd:string" />
+      <part name="String_6" type="xsd:string" />
+      <part name="String_7" type="xsd:string" />
+      <part name="String_8" type="xsd:string" />
+      <part name="String_9" type="xsd:string" />
+   </message>
+   <message name="RegistraContoGioco_modificaContoGioco">
+      <part name="String_1" type="xsd:string" />
+      <part name="String_2" type="xsd:string" />
+      <part name="String_3" type="xsd:string" />
+      <part name="String_4" type="xsd:string" />
+      <part name="String_5" type="xsd:string" />
+      <part name="String_6" type="xsd:string" />
+      <part name="String_7" type="xsd:string" />
+      <part name="String_8" type="xsd:string" />
+      <part name="String_9" type="xsd:string" />
+   </message>
+   <message name="RegistraContoGioco_modificaContoGiocoResponse">
+      <part name="result" type="ns1:RegistraContoGiocoResponse" />
+   </message>
+   <portType name="RegistraContoGioco">
+      <operation name="modificaContoGioco" parameterOrder="String_1 String_2 String_3 String_4 String_5 String_6 String_7 String_8">
+         <input message="tns:RegistraContoGioco_modificaContoGioco" />
+         <output message="tns:RegistraContoGioco_modificaContoGiocoResponse" />
+      </operation>
+      <operation name="registraContoGioco" parameterOrder="String_1 String_2 String_3 String_4 String_5 String_6 String_7 String_8">
+         <input message="tns:RegistraContoGioco_registraContoGioco" />
+         <output message="tns:RegistraContoGioco_registraContoGiocoResponse" />
+      </operation>
+   </portType>
+   <binding name="RegistraContoGiocoBinding" type="tns:RegistraContoGioco">
+      <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" />
+      <operation name="modificaContoGioco">
+         <soap:operation soapAction="" />
+         <input>
+            <soap:body namespace="http://ws.lottomatica.scga.it" use="literal" />
+         </input>
+         <output>
+            <soap:body namespace="http://ws.lottomatica.scga.it" use="literal" />
+         </output>
+      </operation>
+      <operation name="registraContoGioco">
+         <soap:operation soapAction="" />
+         <input>
+            <soap:body namespace="http://ws.lottomatica.scga.it" use="literal" />
+         </input>
+         <output>
+            <soap:body namespace="http://ws.lottomatica.scga.it" use="literal" />
+         </output>
+      </operation>
+   </binding>
+   <service name="RegistraContoGiocoService">
+      <port binding="tns:RegistraContoGiocoBinding" name="RegistraContoGiocoPort">
+         <soap:address location="http://lit.grattaevinci.com/registracontogioco_ejb/RegistraContoGioco" />
+      </port>
+   </service>
+</definitions>

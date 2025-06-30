@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<anag_conti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <id_fornitura>56</id_fornitura>
+  <num_record>1</num_record>
+  <conto>
+    <prog>74023</prog>
+    <nickname>josef</nickname>
+    <email>josef92@libero.it</email>
+    <id_conto>4098-0060181</id_conto>
+    <data_attivazione>2010-01-06T17:38:00</data_attivazione>
+    <cod_rete>2</cod_rete>
+    <cod_conc>4098</cod_conc>
+    <soggetto>
+      <persona_fisica>
+        <id_soggetto>FRRGPP92A01Z112N</id_soggetto>
+        <nome>GIUSEPPE</nome>
+        <cognome>FERRARO</cognome>
+        <sesso>M</sesso>
+        <data_nascita>1992-01-01</data_nascita>
+        <comune_nascita>GERMANIA</comune_nascita>
+        <prov_nascita>EE</prov_nascita>
+        <prov_residenza>CS</prov_residenza>
+      </persona_fisica>
+    </soggetto>
+  </conto>
+</anag_conti>

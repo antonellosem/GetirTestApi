@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE errori [
+  <!ELEMENT errori (id_fornitura, data_invio, num_conti_ok, errore*)>
+  <!ELEMENT id_fornitura (#PCDATA)>
+  <!ELEMENT data_invio (#PCDATA)>
+  <!ELEMENT num_conti_ok (#PCDATA)>
+  <!ELEMENT errore (prog, code, descr?, type?, output?)>
+  <!ELEMENT prog (#PCDATA)>
+  <!ELEMENT code (#PCDATA)>
+  <!ELEMENT descr (#PCDATA)>
+  <!ELEMENT type (#PCDATA)>
+  <!ELEMENT output (#PCDATA)>
+]>
+<errori>
+  <id_fornitura>17</id_fornitura>
+  <data_invio>2011-07-05</data_invio>
+  <num_conti_ok>1928</num_conti_ok>
+  <errore>
+    <prog>60712</prog>
+    <code>XX00</code>
+    <descr>PERSONA FISICA DECEDUTA</descr>
+    <type>WARNING</type>
+    
+  </errore>
+  <errore>
+    <prog>49487</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>49688</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>49742</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>49804</prog>
+    <code>XX10</code>
+    <descr>IL CODICE FISCALE INSERITO E' UN COLLEGATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>50022</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>50067</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>50070</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>50503</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>50627</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>51055</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>51713</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>51996</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>52301</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>52646</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>52698</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>53274</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>53417</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>53435</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>53812</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>53947</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>53996</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>54092</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>54406</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>54447</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>54696</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>54790</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>55190</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>55328</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>55407</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>55686</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>56262</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>56356</prog>
+    <code>XX11</code>
+    <descr>IL CODICE FISCALE INSERITO E' BASE DI OMOCODICE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>56495</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>56600</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>56702</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>56881</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>56887</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>57095</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>57338</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>57412</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>57501</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>57805</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>58088</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>58464</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>58771</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>58979</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>59055</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>60054</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>60108</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>60733</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>60876</prog>
+    <code>XX11</code>
+    <descr>IL CODICE FISCALE INSERITO E' BASE DI OMOCODICE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>61355</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>61441</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>61733</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>61778</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>61919</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>62070</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>62292</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>62847</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>63456</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>63733</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>64362</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>64682</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>64816</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>65019</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>65320</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>65383</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>65500</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>66517</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>66764</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>67208</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+</errori>

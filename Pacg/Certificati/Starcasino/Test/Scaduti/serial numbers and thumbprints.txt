@@ -1,0 +1,9 @@
+Firma
+Serial Number: 9125929675073770184 (DEC)
+				7e a5 d0 b0 2f f7 d2 c8(HEX)
+Thumprint: 5a e2 d4 8f e6 0d 53 95 d4 9d a8 55 9a 9c 86 ce d5 a1 64 e0
+
+Cifratura
+Serial Number: 5801283047839921606  (DEC)
+			   50 82 4c 32 0b fe 75 c6 (HEX)
+Thumprint: d665f1887c54e1cf2a3efd6cae4dc6270bb734c4

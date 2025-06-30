@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE errori [
+  <!ELEMENT errori (id_fornitura, data_invio, num_conti_ok, errore*)>
+  <!ELEMENT id_fornitura (#PCDATA)>
+  <!ELEMENT data_invio (#PCDATA)>
+  <!ELEMENT num_conti_ok (#PCDATA)>
+  <!ELEMENT errore (prog, code, descr?, type?, output?)>
+  <!ELEMENT prog (#PCDATA)>
+  <!ELEMENT code (#PCDATA)>
+  <!ELEMENT descr (#PCDATA)>
+  <!ELEMENT type (#PCDATA)>
+  <!ELEMENT output (#PCDATA)>
+]>
+<errori>
+  <id_fornitura>44</id_fornitura>
+  <data_invio>2011-07-07</data_invio>
+  <num_conti_ok>0</num_conti_ok>
+  <errore>
+    <prog>175946</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>175947</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>175949</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>175952</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>175953</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>175954</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>175957</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>175958</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>175959</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>175960</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>175961</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>175963</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>175965</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>175966</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>175968</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+</errori>

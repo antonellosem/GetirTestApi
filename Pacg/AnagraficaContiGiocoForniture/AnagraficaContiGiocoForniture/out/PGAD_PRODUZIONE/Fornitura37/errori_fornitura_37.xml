@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE errori [
+  <!ELEMENT errori (id_fornitura, data_invio, num_conti_ok, errore*)>
+  <!ELEMENT id_fornitura (#PCDATA)>
+  <!ELEMENT data_invio (#PCDATA)>
+  <!ELEMENT num_conti_ok (#PCDATA)>
+  <!ELEMENT errore (prog, code, descr?, type?, output?)>
+  <!ELEMENT prog (#PCDATA)>
+  <!ELEMENT code (#PCDATA)>
+  <!ELEMENT descr (#PCDATA)>
+  <!ELEMENT type (#PCDATA)>
+  <!ELEMENT output (#PCDATA)>
+]>
+<errori>
+  <id_fornitura>37</id_fornitura>
+  <data_invio>2011-07-05</data_invio>
+  <num_conti_ok>33</num_conti_ok>
+  <errore>
+    <prog>16382</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>16917</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>17126</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>17463</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>17671</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>17910</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>17921</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>18992</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>19904</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>21157</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>21208</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>21236</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>21896</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>28486</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>29015</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>29129</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>30607</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+</errori>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE errori [
+  <!ELEMENT errori (id_fornitura, data_invio, num_conti_ok, errore*)>
+  <!ELEMENT id_fornitura (#PCDATA)>
+  <!ELEMENT data_invio (#PCDATA)>
+  <!ELEMENT num_conti_ok (#PCDATA)>
+  <!ELEMENT errore (prog, code, descr?, type?, output?)>
+  <!ELEMENT prog (#PCDATA)>
+  <!ELEMENT code (#PCDATA)>
+  <!ELEMENT descr (#PCDATA)>
+  <!ELEMENT type (#PCDATA)>
+  <!ELEMENT output (#PCDATA)>
+]>
+<errori>
+  <id_fornitura>42</id_fornitura>
+  <data_invio>2011-07-05</data_invio>
+  <num_conti_ok>3</num_conti_ok>
+  <errore>
+    <prog>175879</prog>
+    <code>1200</code>
+    <descr>IL SOGGETTO E' GIA' TITOLARE DI UN CONTO PRESSO IL CONCESSIONARIO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+</errori>

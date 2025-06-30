@@ -1,0 +1,62 @@
+﻿Creazione CSR e Chiavi Private
+https://www.sslshopper.com/article-most-common-openssl-commands.html
+
+STEP richiesta certificato ADM tramite open ssl
+
+N.B. Evitare i caratteri speciali nelle password
+
+1)Creare i file delle richieste (aprire il cmd con permessi amministratore e recarsi sotto C:\Program Files\OpenSSL-Win64\bin)
+
+>openssl req -new -newkey rsa:2048 -keyout firma_key.pem  -out firma_request.pem
+>Password: intralot
+
+>openssl req -new -newkey rsa:2048 -keyout cifra_key.pem  -out cifra_request.pem
+>Password: intralot
+
+2)Caricare i file delle richieste su area riservata
+
+3)salvare il risultato dell'elaborazione di aams in 
+firma_response.pem
+cifra_response.pem
+
+Verifica che la response e la chiave privata corrispondano(Passaggio che si può ignorare):
+FIRMA
+>openssl x509 -in firma_response.pem | openssl md5
+>openssl rsa -in firma_key.pem | openssl md5
+CIFRA
+>openssl x509 -in cifra_response.pem | openssl md5
+>openssl rsa -in cifra_key.pem | openssl md5
+
+4)Export in pkcs12 
+
+5)FIRMA (farlo con CA, nel caso di ambiente di test usare la CA di test)
+>openssl pkcs12 -export -in firma_response.pem -inkey firma_key.pem -certfile CA_Sogei_2021.cer -name "Firma Concessionario" -out firma.pfx
+>openssl pkcs12 -export -in firma_response.pem -inkey firma_key.pem -certfile CA_Sogei_2038_test.cer -name "Firma Concessionario" -out firma.pfx
+
+OPPURE (senza CA)
+>openssl pkcs12 -export -in firma_response.pem -inkey firma_key.pem -out firma_no_CA.pfx
+
+CIFRA (farlo con CA, nel caso di ambiente di test usare la CA di test)
+>openssl pkcs12 -export -in cifra_response.pem -inkey cifra_key.pem -certfile CA_Sogei_2021.cer -name "Firma Concessionario" -out cifra.pfx
+>openssl pkcs12 -export -in cifra_response.pem -inkey cifra_key.pem -certfile CA_Sogei_2038_test.cer -name "Firma Concessionario" -out cifra.pfx
+
+OPPURE (senza CA)
+>openssl pkcs12 -export -in cifra_response.pem -inkey cifra_key.pem -out cifra_no_CA.pfx
+
+ALTRE UTILITY
+
+Converte un ceriticato in formato DER in PEM
+>openssl x509 -inform der -in certificate.cer -out certificate.pem
+
+Converte un ceriticato in formato PEM in DER
+>openssl x509 -inform PEM -in certificate.pem -outform DER -out certificate.cer
+
+--Decripta un messaggio con la chiave pubblica
+openssl smime -decrypt -inform DER -in file.encrypted -recip cifra.cer -inkey key.pem -out file.decrypted
+
+--Verifica ed elimina la firma di un pacchetto PKcs7 (Necessaria La CA del certificato in formato PEM)
+>openssl smime -verify -inform DER -in file.decrypted -signer aams.cer -CAfile  ca.pem -noverify -out file.tar.gz
+
+-- esportazione con compatibilità librerie .net sha 256
+openssl pkcs12 -export -aes256 -CSP "Microsoft Enhanced RSA and AES Cryptographic Provider" -inkey externalservice-collaudo.goldbet.it_key.pem -in certnew.cer -out externalservice-collaudo.goldbet.it.pfx 
+

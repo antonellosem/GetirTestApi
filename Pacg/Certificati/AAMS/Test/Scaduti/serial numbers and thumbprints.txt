@@ -1,0 +1,10 @@
+Firma
+Serial Number: 8329462352264009956 (DEC)
+				739831e0c4af98e4 (HEX)
+Thumprint: fb13427c9dc460f008fc88950e675d0551e8a4df
+
+Cifratura - Anagrafica Conti Gioco
+Serial Number: 3767122717363554452 (DEC)
+				3447822701c24894 (HEX)
+Thumprint: 23616f3b2574e97959d1c217f8bf4c1a49974f33
+

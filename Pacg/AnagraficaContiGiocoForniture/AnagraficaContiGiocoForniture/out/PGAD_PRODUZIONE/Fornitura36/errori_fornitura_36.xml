@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE errori [
+  <!ELEMENT errori (id_fornitura, data_invio, num_conti_ok, errore*)>
+  <!ELEMENT id_fornitura (#PCDATA)>
+  <!ELEMENT data_invio (#PCDATA)>
+  <!ELEMENT num_conti_ok (#PCDATA)>
+  <!ELEMENT errore (prog, code, descr?, type?, output?)>
+  <!ELEMENT prog (#PCDATA)>
+  <!ELEMENT code (#PCDATA)>
+  <!ELEMENT descr (#PCDATA)>
+  <!ELEMENT type (#PCDATA)>
+  <!ELEMENT output (#PCDATA)>
+]>
+<errori>
+  <id_fornitura>36</id_fornitura>
+  <data_invio>2011-07-05</data_invio>
+  <num_conti_ok>0</num_conti_ok>
+  <errore>
+    <prog>3036</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>4598</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>4734</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>5213</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>5275</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>5689</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>5761</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>5829</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>5969</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>6372</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>6433</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>6469</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>6663</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>6731</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>7883</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>8104</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>8728</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>9169</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>9431</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>9476</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>9482</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>9586</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>9662</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>9874</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>9979</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>10030</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>10673</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>10786</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>11405</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>11694</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>12264</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>12267</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>12399</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>12435</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>14227</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>14309</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>14519</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>14574</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>15183</prog>
+    <code>1201</code>
+    <descr>CONTO ESISTENTE</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>15687</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+</errori>

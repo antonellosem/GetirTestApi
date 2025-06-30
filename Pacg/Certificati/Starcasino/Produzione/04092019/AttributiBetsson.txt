@@ -1,0 +1,14 @@
+passphrase: Betsson2019
+Country name = MT
+State or Province = Malta
+Locality Name = Xbiex
+Organization name = BML Group Limited
+Organizatione unit name = BML Group Limited
+Common Name = 94023840120-01
+email = developer@gamenetgroup.it
+
+Challege Password = Betsson2019
+optional company name = BML Group Limited
+
+
+

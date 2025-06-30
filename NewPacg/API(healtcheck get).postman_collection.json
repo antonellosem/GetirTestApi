@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "9e96abf8-ea99-4137-b584-afc3fed90a01",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "healtcheck senza autenticazione NTML (dominio)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "838290a6-f7c6-417d-a387-7df2d2c719f4",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Host",
+						"value": "{{BASE_URL}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{PROTOCOL}}://{{BASE_URL}}/api/APIControllerBase/healtcheck",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"APIControllerBase",
+						"healtcheck"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "healtcheck con autenticazione NTML (dominio)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "838290a6-f7c6-417d-a387-7df2d2c719f4",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "ntlm",
+					"ntlm": [
+						{
+							"key": "password",
+							"value": "{{PASSWORD}}",
+							"type": "string"
+						},
+						{
+							"key": "disableRetryRequest",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "username",
+							"value": "{{USERNAME}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Host",
+						"value": "{{BASE_URL}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{PROTOCOL}}://{{BASE_URL}}/api/controllerName/healtcheck",
+					"protocol": "{{PROTOCOL}}",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"controllerName",
+						"healtcheck"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "USERNAME",
+			"value": "winco\\admjenk"
+		},
+		{
+			"key": "PASSWORD",
+			"value": "Jenkin$2020!"
+		}
+	]
+}

@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.intralot.it/pgad" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PGADService" targetNamespace="http://www.intralot.it/pgad" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.intralot.it/pgad/Imports">
+      <xsd:import schemaLocation="http://backend.sviluppo.intralot.it/PgadService/PGADService.svc?xsd=xsd0" namespace="http://www.intralot.it/pgad" />
+      <xsd:import schemaLocation="http://backend.sviluppo.intralot.it/PgadService/PGADService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://backend.sviluppo.intralot.it/PgadService/PGADService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" />
+      <xsd:import schemaLocation="http://backend.sviluppo.intralot.it/PgadService/PGADService.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://backend.sviluppo.intralot.it/PgadService/PGADService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/PgadCommunication.Pgad" />
+      <xsd:import schemaLocation="http://backend.sviluppo.intralot.it/PgadService/PGADService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
+      <xsd:import schemaLocation="http://backend.sviluppo.intralot.it/PgadService/PGADService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPgad_ApriContoPersonaFisica_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApriContoPersonaFisica" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_ApriContoPersonaFisica_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApriContoPersonaFisicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_ApriContoPersonaGiuridica_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApriContoPersonaGiuridica" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_ApriContoPersonaGiuridica_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApriContoPersonaGiuridicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_AggiornaDocumento_InputMessage">
+    <wsdl:part name="parameters" element="tns:AggiornaDocumento" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_AggiornaDocumento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AggiornaDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_SubRegistrazione_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubRegistrazione" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_SubRegistrazione_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubRegistrazioneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_StatoConto_InputMessage">
+    <wsdl:part name="parameters" element="tns:StatoConto" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_StatoConto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StatoContoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_CambioStato_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambioStato" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_CambioStato_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambioStatoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_ModificaProvinciaResidenza_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaProvinciaResidenza" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_ModificaProvinciaResidenza_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModificaProvinciaResidenzaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_MigrazioneContoGioco_InputMessage">
+    <wsdl:part name="parameters" element="tns:MigrazioneContoGioco" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_MigrazioneContoGioco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MigrazioneContoGiocoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_MigrazioneContoGioco_V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:MigrazioneContoGioco_V2" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_MigrazioneContoGioco_V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MigrazioneContoGioco_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_MovimentazioneBonus_InputMessage">
+    <wsdl:part name="parameters" element="tns:MovimentazioneBonus" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_MovimentazioneBonus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MovimentazioneBonusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_MovimentazioneBonus_V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:MovimentazioneBonus_V2" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_MovimentazioneBonus_V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MovimentazioneBonus_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_StornoBonus_InputMessage">
+    <wsdl:part name="parameters" element="tns:StornoBonus" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_StornoBonus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StornoBonusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_StornoBonus_V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:StornoBonus_V2" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_StornoBonus_V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StornoBonus_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_MovimentazioneCredito_InputMessage">
+    <wsdl:part name="parameters" element="tns:MovimentazioneCredito" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_MovimentazioneCredito_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MovimentazioneCreditoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_MovimentazioneCredito_V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:MovimentazioneCredito_V2" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_MovimentazioneCredito_V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MovimentazioneCredito_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_StornoMovimentazioneCredito_InputMessage">
+    <wsdl:part name="parameters" element="tns:StornoMovimentazioneCredito" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_StornoMovimentazioneCredito_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StornoMovimentazioneCreditoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_StornoMovimentazioneCredito_V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:StornoMovimentazioneCredito_V2" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_StornoMovimentazioneCredito_V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StornoMovimentazioneCredito_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_SaldoContoUtente_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaldoContoUtente" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_SaldoContoUtente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaldoContoUtenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_SaldoContoUtente_V2_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaldoContoUtente_V2" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_SaldoContoUtente_V2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaldoContoUtente_V2Response" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_RiepilogoOperazioniMovimentazione_InputMessage">
+    <wsdl:part name="parameters" element="tns:RiepilogoOperazioniMovimentazione" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_RiepilogoOperazioniMovimentazione_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RiepilogoOperazioniMovimentazioneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_RiepilogoOperazioniServizio_InputMessage">
+    <wsdl:part name="parameters" element="tns:RiepilogoOperazioniServizio" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_RiepilogoOperazioniServizio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RiepilogoOperazioniServizioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_SubRegistrazione2_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubRegistrazione2" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_SubRegistrazione2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubRegistrazione2Response" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_ApriContoPersonaFisicaSemplificato_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApriContoPersonaFisicaSemplificato" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_ApriContoPersonaFisicaSemplificato_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApriContoPersonaFisicaSemplificatoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_ApriContoPersonaFisicaSemplificatoIntegrazione_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApriContoPersonaFisicaSemplificatoIntegrazione" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_ApriContoPersonaFisicaSemplificatoIntegrazione_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApriContoPersonaFisicaSemplificatoIntegrazioneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_ElencoContiGiocoSenzaSubregistrazione_InputMessage">
+    <wsdl:part name="parameters" element="tns:ElencoContiGiocoSenzaSubregistrazione" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_ElencoContiGiocoSenzaSubregistrazione_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ElencoContiGiocoSenzaSubregistrazioneResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_ContoGiocoDormiente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ContoGiocoDormiente" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_ContoGiocoDormiente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ContoGiocoDormienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_ElencoContiGiocoDormienti_InputMessage">
+    <wsdl:part name="parameters" element="tns:ElencoContiGiocoDormienti" />
+  </wsdl:message>
+  <wsdl:message name="IPgad_ElencoContiGiocoDormienti_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ElencoContiGiocoDormientiResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPgad">
+    <wsdl:operation name="ApriContoPersonaFisica">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/ApriContoPersonaFisica" message="tns:IPgad_ApriContoPersonaFisica_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/ApriContoPersonaFisicaResponse" message="tns:IPgad_ApriContoPersonaFisica_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApriContoPersonaGiuridica">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/ApriContoPersonaGiuridica" message="tns:IPgad_ApriContoPersonaGiuridica_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/ApriContoPersonaGiuridicaResponse" message="tns:IPgad_ApriContoPersonaGiuridica_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AggiornaDocumento">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/AggiornaDocumento" message="tns:IPgad_AggiornaDocumento_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/AggiornaDocumentoResponse" message="tns:IPgad_AggiornaDocumento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubRegistrazione">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/SubRegistrazione" message="tns:IPgad_SubRegistrazione_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/SubRegistrazioneResponse" message="tns:IPgad_SubRegistrazione_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StatoConto">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/StatoConto" message="tns:IPgad_StatoConto_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/StatoContoResponse" message="tns:IPgad_StatoConto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambioStato">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/CambioStato" message="tns:IPgad_CambioStato_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/CambioStatoResponse" message="tns:IPgad_CambioStato_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModificaProvinciaResidenza">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/ModificaProvinciaResidenza" message="tns:IPgad_ModificaProvinciaResidenza_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/ModificaProvinciaResidenzaResponse" message="tns:IPgad_ModificaProvinciaResidenza_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MigrazioneContoGioco">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/MigrazioneContoGioco" message="tns:IPgad_MigrazioneContoGioco_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/MigrazioneContoGiocoResponse" message="tns:IPgad_MigrazioneContoGioco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MigrazioneContoGioco_V2">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/MigrazioneContoGioco_V2" message="tns:IPgad_MigrazioneContoGioco_V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/MigrazioneContoGioco_V2Response" message="tns:IPgad_MigrazioneContoGioco_V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MovimentazioneBonus">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/MovimentazioneBonus" message="tns:IPgad_MovimentazioneBonus_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/MovimentazioneBonusResponse" message="tns:IPgad_MovimentazioneBonus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MovimentazioneBonus_V2">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/MovimentazioneBonus_V2" message="tns:IPgad_MovimentazioneBonus_V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/MovimentazioneBonus_V2Response" message="tns:IPgad_MovimentazioneBonus_V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StornoBonus">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/StornoBonus" message="tns:IPgad_StornoBonus_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/StornoBonusResponse" message="tns:IPgad_StornoBonus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StornoBonus_V2">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/StornoBonus_V2" message="tns:IPgad_StornoBonus_V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/StornoBonus_V2Response" message="tns:IPgad_StornoBonus_V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MovimentazioneCredito">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/MovimentazioneCredito" message="tns:IPgad_MovimentazioneCredito_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/MovimentazioneCreditoResponse" message="tns:IPgad_MovimentazioneCredito_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MovimentazioneCredito_V2">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/MovimentazioneCredito_V2" message="tns:IPgad_MovimentazioneCredito_V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/MovimentazioneCredito_V2Response" message="tns:IPgad_MovimentazioneCredito_V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StornoMovimentazioneCredito">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/StornoMovimentazioneCredito" message="tns:IPgad_StornoMovimentazioneCredito_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/StornoMovimentazioneCreditoResponse" message="tns:IPgad_StornoMovimentazioneCredito_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StornoMovimentazioneCredito_V2">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/StornoMovimentazioneCredito_V2" message="tns:IPgad_StornoMovimentazioneCredito_V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/StornoMovimentazioneCredito_V2Response" message="tns:IPgad_StornoMovimentazioneCredito_V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaldoContoUtente">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/SaldoContoUtente" message="tns:IPgad_SaldoContoUtente_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/SaldoContoUtenteResponse" message="tns:IPgad_SaldoContoUtente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaldoContoUtente_V2">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/SaldoContoUtente_V2" message="tns:IPgad_SaldoContoUtente_V2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/SaldoContoUtente_V2Response" message="tns:IPgad_SaldoContoUtente_V2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RiepilogoOperazioniMovimentazione">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/RiepilogoOperazioniMovimentazione" message="tns:IPgad_RiepilogoOperazioniMovimentazione_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/RiepilogoOperazioniMovimentazioneResponse" message="tns:IPgad_RiepilogoOperazioniMovimentazione_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RiepilogoOperazioniServizio">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/RiepilogoOperazioniServizio" message="tns:IPgad_RiepilogoOperazioniServizio_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/RiepilogoOperazioniServizioResponse" message="tns:IPgad_RiepilogoOperazioniServizio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubRegistrazione2">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/SubRegistrazione2" message="tns:IPgad_SubRegistrazione2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/SubRegistrazione2Response" message="tns:IPgad_SubRegistrazione2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApriContoPersonaFisicaSemplificato">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/ApriContoPersonaFisicaSemplificato" message="tns:IPgad_ApriContoPersonaFisicaSemplificato_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/ApriContoPersonaFisicaSemplificatoResponse" message="tns:IPgad_ApriContoPersonaFisicaSemplificato_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApriContoPersonaFisicaSemplificatoIntegrazione">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/ApriContoPersonaFisicaSemplificatoIntegrazione" message="tns:IPgad_ApriContoPersonaFisicaSemplificatoIntegrazione_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/ApriContoPersonaFisicaSemplificatoIntegrazioneResponse" message="tns:IPgad_ApriContoPersonaFisicaSemplificatoIntegrazione_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ElencoContiGiocoSenzaSubregistrazione">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/ElencoContiGiocoSenzaSubregistrazione" message="tns:IPgad_ElencoContiGiocoSenzaSubregistrazione_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/ElencoContiGiocoSenzaSubregistrazioneResponse" message="tns:IPgad_ElencoContiGiocoSenzaSubregistrazione_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ContoGiocoDormiente">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/ContoGiocoDormiente" message="tns:IPgad_ContoGiocoDormiente_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/ContoGiocoDormienteResponse" message="tns:IPgad_ContoGiocoDormiente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ElencoContiGiocoDormienti">
+      <wsdl:input wsaw:Action="http://www.intralot.it/pgad/IPgad/ElencoContiGiocoDormienti" message="tns:IPgad_ElencoContiGiocoDormienti_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.intralot.it/pgad/IPgad/ElencoContiGiocoDormientiResponse" message="tns:IPgad_ElencoContiGiocoDormienti_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PgadService" type="tns:IPgad">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ApriContoPersonaFisica">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/ApriContoPersonaFisica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApriContoPersonaGiuridica">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/ApriContoPersonaGiuridica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AggiornaDocumento">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/AggiornaDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubRegistrazione">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/SubRegistrazione" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StatoConto">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/StatoConto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CambioStato">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/CambioStato" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModificaProvinciaResidenza">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/ModificaProvinciaResidenza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MigrazioneContoGioco">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/MigrazioneContoGioco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MigrazioneContoGioco_V2">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/MigrazioneContoGioco_V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimentazioneBonus">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/MovimentazioneBonus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimentazioneBonus_V2">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/MovimentazioneBonus_V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StornoBonus">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/StornoBonus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StornoBonus_V2">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/StornoBonus_V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimentazioneCredito">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/MovimentazioneCredito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MovimentazioneCredito_V2">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/MovimentazioneCredito_V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StornoMovimentazioneCredito">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/StornoMovimentazioneCredito" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StornoMovimentazioneCredito_V2">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/StornoMovimentazioneCredito_V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaldoContoUtente">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/SaldoContoUtente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaldoContoUtente_V2">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/SaldoContoUtente_V2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RiepilogoOperazioniMovimentazione">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/RiepilogoOperazioniMovimentazione" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RiepilogoOperazioniServizio">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/RiepilogoOperazioniServizio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubRegistrazione2">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/SubRegistrazione2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApriContoPersonaFisicaSemplificato">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/ApriContoPersonaFisicaSemplificato" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApriContoPersonaFisicaSemplificatoIntegrazione">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/ApriContoPersonaFisicaSemplificatoIntegrazione" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ElencoContiGiocoSenzaSubregistrazione">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/ElencoContiGiocoSenzaSubregistrazione" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ContoGiocoDormiente">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/ContoGiocoDormiente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ElencoContiGiocoDormienti">
+      <soap:operation soapAction="http://www.intralot.it/pgad/IPgad/ElencoContiGiocoDormienti" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PGADService">
+    <wsdl:port name="PgadService" binding="tns:PgadService">
+      <soap:address location="http://backend.sviluppo.intralot.it/PgadService/PGADService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

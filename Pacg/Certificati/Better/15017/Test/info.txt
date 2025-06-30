@@ -1,0 +1,13 @@
+Tipo Certificato: Protocolli di Gioco (PACG, PGDA, PBAD, PBDS, PGLT, PGNL, PGLA, PGNC, PGNW, PGNR, PGNX, PGPV)
+
+Dn: ou=conti di gioco, o=AAMS, c=IT
+
+Richiedente: NNLSVT...
+
+Common name: 09257071002-01
+
+Serial Number Cert Firma: 7010451361753515617
+
+Serial Number Cert Cifra: 5245104722940408053
+
+Status: VALIDO

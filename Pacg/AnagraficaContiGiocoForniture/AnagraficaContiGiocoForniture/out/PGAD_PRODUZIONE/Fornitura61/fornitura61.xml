@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<anag_conti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <id_fornitura>61</id_fornitura>
+  <num_record>2</num_record>
+  <conto>
+    <prog>53274</prog>
+    <nickname>cicciotto65</nickname>
+    <email>pasqualino.macri@fastwebnet.it</email>
+    <id_conto>4098-0049921</id_conto>
+    <data_attivazione>2009-10-05T12:25:00</data_attivazione>
+    <cod_rete>2</cod_rete>
+    <cod_conc>4098</cod_conc>
+    <soggetto>
+      <persona_fisica>
+        <id_soggetto>MCRPQL65E09F839C</id_soggetto>
+        <nome>PASQUALINO</nome>
+        <cognome>MACRi'</cognome>
+        <sesso>M</sesso>
+        <data_nascita>1965-05-09</data_nascita>
+        <comune_nascita>NAPOLI</comune_nascita>
+        <prov_nascita>NA</prov_nascita>
+        <prov_residenza>NA</prov_residenza>
+      </persona_fisica>
+    </soggetto>
+  </conto>
+  <conto>
+    <prog>85796</prog>
+    <nickname>salvobbb</nickname>
+    <email>salvobbb@tiscali.it</email>
+    <id_conto>4098-0066190</id_conto>
+    <data_attivazione>2010-02-21T14:08:00</data_attivazione>
+    <cod_rete>2</cod_rete>
+    <cod_conc>4098</cod_conc>
+    <soggetto>
+      <persona_fisica>
+        <id_soggetto>BRBSVT73S08A028H</id_soggetto>
+        <nome>SALVATORE SEBASTIANO</nome>
+        <cognome>BARBAGALLO</cognome>
+        <sesso>M</sesso>
+        <data_nascita>1973-11-08</data_nascita>
+        <comune_nascita>ACIREALE</comune_nascita>
+        <prov_nascita>CT</prov_nascita>
+        <prov_residenza>CT</prov_residenza>
+      </persona_fisica>
+    </soggetto>
+  </conto>
+</anag_conti>

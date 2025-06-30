@@ -1,0 +1,9 @@
+public --> CifraturaSistemaCentrale.cer (c48dfce45c40017c008d9b51e748f9bcea2f3aba)
+
+Goldbet--> private--> firma.pfx (0d67c59b7588ccd949728312f4cb69dae65356d8)
+
+Better--> private--> firma.pfx (d342d7028169b68d77b21a625ebc054138f4d522)
+
+Betsson --> private--> firma.pfx 
+
+Planet --> private -->firma.pfx (97906ec0a8c3ff41ffdbdecb511dd5781c8b938b)

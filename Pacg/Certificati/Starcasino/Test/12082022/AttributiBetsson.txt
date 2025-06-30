@@ -1,0 +1,14 @@
+passphrase: Gamenet2019
+Country name = IT
+State or Province = Italy
+Locality Name = Rome
+Organization name = Golbet S.p.a.
+Organizatione unit name = Golbet S.p.a.
+Common Name = 04129410272-01
+email = developer@gamenetgroup.it
+
+Challege Password = Gamenet2019
+optional company name = Golbet S.p.a.
+
+
+

@@ -1,0 +1,11 @@
+passphrase: intralot
+Country name = IT
+State or Province = Italy
+Locality Name = Rome
+Organization name = Intralot Italia S.p.A.
+Organizatione unit name = Intralot Italia S.p.A.
+Common Name = 09255551005-01
+email = developer@intralot.it
+
+Challege Password = Intralot2016
+optional company name = Intralot Italia S.p.A.

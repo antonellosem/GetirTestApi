@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<anag_conti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <id_fornitura>83</id_fornitura>
+  <num_record>1</num_record>
+  <conto>
+    <prog>156593</prog>
+    <nickname>ABRAMORC</nickname>
+    <email>ABRAFRAN@LIBERO.IT</email>
+    <id_conto>4098-0119893</id_conto>
+    <data_attivazione>2011-02-23T18:48:00</data_attivazione>
+    <cod_rete>2</cod_rete>
+    <cod_conc>4098</cod_conc>
+    <soggetto>
+      <persona_fisica>
+        <id_soggetto>BRMFNC66P17H224X</id_soggetto>
+        <nome>FRANCESCO MARIA</nome>
+        <cognome>ABRAMO</cognome>
+        <sesso>M</sesso>
+        <data_nascita>1966-09-17</data_nascita>
+        <comune_nascita>REGGIO CALABRIA</comune_nascita>
+        <prov_nascita>RC</prov_nascita>
+        <prov_residenza>RC</prov_residenza>
+      </persona_fisica>
+    </soggetto>
+  </conto>
+</anag_conti>

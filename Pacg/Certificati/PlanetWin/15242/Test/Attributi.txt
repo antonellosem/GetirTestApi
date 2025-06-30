@@ -1,0 +1,11 @@
+passphrase: PWO2025Test!
+Country name = IT
+State or Province = Italy
+Locality Name = Rome
+Organization name = PWO Limited
+Organizatione unit name = PWO Limited
+Common Name = 13747301003-01
+email = OnlinePlatform&Integration@gamenetgroup.it
+
+Challege Password = PWO2025Test!
+optional company name = PWO Limited

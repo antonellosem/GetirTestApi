@@ -1,0 +1,42 @@
+NB: le date devono essere in millisecondi
+--------------------------------------------
+JS:
+var d = Date.parse("1990-10-10");
+console.log(d)
+--------------------------------------------
+
+{
+	"IdTransazione": 0,
+	"PartitaIva": "09255551005",
+	"CodiceAgenzia": 15226,
+	"CodiceConto": "0101010",
+	"CodiceFiscale": "GGGPPP90R10Z510K",
+	"Cognome": "GGGG",
+	"Nome": "PIPPO",
+	"Sesso": "1",
+	"Email": "assasa@sdsd.it",
+	"UserName": "AMMKdFX",
+	"Comune_Nazione_Nascita": "HAITI",
+	"ProvinciaNascita": "EE",
+	"DataNascita": "/Date(655516800000)/",
+	"IndirizzoResidenza": "via Roma",
+	"ComuneResidenza": "Roma",
+	"ProvinciaResidenza": "RM",
+	"CapResidenza": "00100",
+	"DataRilascioDocumento": "/Date(1609459200000)/",
+	"AutoritaRilascioDocumento": "COMUNE",
+	"LocalicaRilascioDocumento": "Roma",
+	"NumeroDocumento": "AU123456q1",
+	"IdTipoDocumento": 1,
+	"NumeroLimiti": 1,
+	"ElencoLimiti": [
+		{
+			"limite": {
+				"PropertyChanged": null,
+				"importoField": 100000,
+				"tipoLimiteField": 1
+			}
+		}
+	],
+	"TipoFornituraDatiPersonali": 1
+}

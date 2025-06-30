@@ -1,0 +1,11 @@
+passphrase: Lottomatica2024!
+Country name = IT
+State or Province = Italy
+Locality Name = Rome
+Organization name = GBO Italy S.p.a.
+Organizatione unit name = GBO Italy S.p.a.
+Common Name = 09255551005-01
+email = OnlinePlatform&Integration@lottomatica.com
+
+Challege Password = Lottomatica2024!
+optional company name = GBO Italy S.p.a.

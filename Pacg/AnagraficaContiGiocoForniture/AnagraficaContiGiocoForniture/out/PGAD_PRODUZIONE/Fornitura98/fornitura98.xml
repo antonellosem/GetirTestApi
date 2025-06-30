@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<anag_conti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <id_fornitura>98</id_fornitura>
+  <num_record>1</num_record>
+  <conto>
+    <prog>162948</prog>
+    <nickname>mik3la</nickname>
+    <email>mad4m3@hotmail.it</email>
+    <id_conto>4098-0125831</id_conto>
+    <data_attivazione>2011-03-20T10:47:00</data_attivazione>
+    <cod_rete>2</cod_rete>
+    <cod_conc>4098</cod_conc>
+    <soggetto>
+      <persona_fisica>
+        <id_soggetto>GRSMHL90C61A509U</id_soggetto>
+        <nome>MICHELA FRANCESCA</nome>
+        <cognome>GRASSI</cognome>
+        <sesso>F</sesso>
+        <data_nascita>1990-03-21</data_nascita>
+        <comune_nascita>AVELLINO</comune_nascita>
+        <prov_nascita>AV</prov_nascita>
+        <prov_residenza>AV</prov_residenza>
+      </persona_fisica>
+    </soggetto>
+  </conto>
+</anag_conti>

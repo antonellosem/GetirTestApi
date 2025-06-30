@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.intralot.it/pgad" elementFormDefault="qualified" targetNamespace="http://www.intralot.it/pgad" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://backend.sviluppo.intralot.it/PgadService/PGADService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://backend.sviluppo.intralot.it/PgadService/PGADService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" />
+  <xs:element name="ApriContoPersonaFisica">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodiceAgenzia" type="xs:int" />
+        <xs:element minOccurs="0" name="CodiceConto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodiceFiscale" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Cognome" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="Sesso" type="q1:char" />
+        <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Comune_Nazione_Nascita" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProvinciaNascita" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DataNascita" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="IndirizzoResidenza" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ComuneResidenza" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProvinciaResidenza" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CapResidenza" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DataRilascioDocumento" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="AutoritaRilascioDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LocalicaRilascioDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdTipoDocumento" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApriContoPersonaFisicaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="ApriContoPersonaFisicaResult" nillable="true" type="q2:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApriContoPersonaGiuridica">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodiceAgenzia" type="xs:int" />
+        <xs:element minOccurs="0" name="CodiceConto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PartitaIVA" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RagioneSociale" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Indirizzo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Comune" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Provincia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Cap" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApriContoPersonaGiuridicaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="ApriContoPersonaGiuridicaResult" nillable="true" type="q3:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AggiornaDocumento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodiceAgenzia" type="xs:int" />
+        <xs:element minOccurs="0" name="CodiceConto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DataRilascioDocumento" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="AutoritaRilascioDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LocalicaRilascioDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdTipoDocumento" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AggiornaDocumentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="AggiornaDocumentoResult" nillable="true" type="q4:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubRegistrazione">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodiceAgenzia" type="xs:int" />
+        <xs:element minOccurs="0" name="CodiceContratto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubRegistrazioneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="SubRegistrazioneResult" nillable="true" type="q5:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StatoConto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodiceAgenzia" type="xs:int" />
+        <xs:element minOccurs="0" name="CodiceContratto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StatoContoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="StatoContoResult" nillable="true" type="q6:PgadGatewayStatoResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambioStato">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodiceAgenzia" type="xs:int" />
+        <xs:element minOccurs="0" name="CodiceContratto" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="CausaleCambioStato" type="q7:CAUSALE_CAMBIO_STATO_CONTO" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="StatoConto" type="q8:STATO_CONTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambioStatoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="CambioStatoResult" nillable="true" type="q9:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaProvinciaResidenza">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodiceAgenzia" type="xs:int" />
+        <xs:element minOccurs="0" name="CodiceContratto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProvinciaResidenza" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificaProvinciaResidenzaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="ModificaProvinciaResidenzaResult" nillable="true" type="q10:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MigrazioneContoGioco">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdReteContoOriginario" type="xs:int" />
+        <xs:element minOccurs="0" name="TitolareSistemaOriginario" type="xs:int" />
+        <xs:element minOccurs="0" name="CodiceContoOriginario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdReteContoDestinazione" type="xs:int" />
+        <xs:element minOccurs="0" name="TitolareSistemaDestinazione" type="xs:int" />
+        <xs:element minOccurs="0" name="CodiceContoDestinazione" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodiceFiscale" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ImportoSaldo" type="xs:int" />
+        <xs:element minOccurs="0" name="DataSaldo" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="ListBonusPresenti" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MigrazioneContoGiocoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="MigrazioneContoGiocoResult" nillable="true" type="q11:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MigrazioneContoGioco_V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdReteContoOriginario" type="xs:int" />
+        <xs:element minOccurs="0" name="TitolareSistemaOriginario" type="xs:int" />
+        <xs:element minOccurs="0" name="CodiceContoOriginario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdReteContoDestinazione" type="xs:int" />
+        <xs:element minOccurs="0" name="TitolareSistemaDestinazione" type="xs:int" />
+        <xs:element minOccurs="0" name="CodiceContoDestinazione" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodiceFiscale" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ImportoSaldo" type="xs:int" />
+        <xs:element minOccurs="0" name="DataSaldo" type="xs:dateTime" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="ListBonusPresenti" nillable="true" type="q12:ArrayOfBonus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MigrazioneContoGioco_V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="MigrazioneContoGioco_V2Result" nillable="true" type="q13:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MovimentazioneBonus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ContoDiGioco" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TitolareSistema" type="xs:int" />
+        <xs:element minOccurs="0" name="ListBonusDaAssegnare" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="ListBonusPresenti" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="SaldoUtente" type="xs:int" />
+        <xs:element minOccurs="0" name="DataSaldo" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MovimentazioneBonusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="MovimentazioneBonusResult" nillable="true" type="q14:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MovimentazioneBonus_V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ContoDiGioco" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TitolareSistema" type="xs:int" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="ListBonusDaAssegnare" nillable="true" type="q15:ArrayOfBonus" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="ListBonusPresenti" nillable="true" type="q16:ArrayOfBonus" />
+        <xs:element minOccurs="0" name="SaldoUtente" type="xs:int" />
+        <xs:element minOccurs="0" name="DataSaldo" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MovimentazioneBonus_V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="MovimentazioneBonus_V2Result" nillable="true" type="q17:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StornoBonus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ContoDiGioco" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TitolareSistema" type="xs:int" />
+        <xs:element minOccurs="0" name="ListBonusDaAssegnare" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="ListBonusPresenti" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="SaldoUtente" type="xs:int" />
+        <xs:element minOccurs="0" name="DataSaldo" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StornoBonusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="StornoBonusResult" nillable="true" type="q18:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StornoBonus_V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ContoDiGioco" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TitolareSistema" type="xs:int" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="ListBonusDaAssegnare" nillable="true" type="q19:ArrayOfBonus" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="ListBonusPresenti" nillable="true" type="q20:ArrayOfBonus" />
+        <xs:element minOccurs="0" name="SaldoUtente" type="xs:int" />
+        <xs:element minOccurs="0" name="DataSaldo" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StornoBonus_V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="StornoBonus_V2Result" nillable="true" type="q21:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MovimentazioneCredito">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="CausaleDiMovimento" type="q22:CAUSALE_MOVIMENTO" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="MezzoDiPagamento" type="q23:MEZZO_PAGAMENTO" />
+        <xs:element minOccurs="0" name="ContoDiGioco" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TitolareSistema" type="xs:int" />
+        <xs:element minOccurs="0" name="ImportoMovimento" type="xs:int" />
+        <xs:element minOccurs="0" name="ListBonusPresenti" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="SaldoUtente" type="xs:int" />
+        <xs:element minOccurs="0" name="DataSaldo" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MovimentazioneCreditoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="MovimentazioneCreditoResult" nillable="true" type="q24:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MovimentazioneCredito_V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="CausaleDiMovimento" type="q25:CAUSALE_MOVIMENTO" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="MezzoDiPagamento" type="q26:MEZZO_PAGAMENTO" />
+        <xs:element minOccurs="0" name="ContoDiGioco" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TitolareSistema" type="xs:int" />
+        <xs:element minOccurs="0" name="ImportoMovimento" type="xs:int" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="ListBonusPresenti" nillable="true" type="q27:ArrayOfBonus" />
+        <xs:element minOccurs="0" name="SaldoUtente" type="xs:int" />
+        <xs:element minOccurs="0" name="DataSaldo" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MovimentazioneCredito_V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="MovimentazioneCredito_V2Result" nillable="true" type="q28:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StornoMovimentazioneCredito">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="CausaleDiMovimento" type="q29:CAUSALE_MOVIMENTO" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="MezzoDiPagamento" type="q30:MEZZO_PAGAMENTO" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="TipoStorno" type="q31:TIPO_STORNO" />
+        <xs:element minOccurs="0" name="idRicevutaDaStornare" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ContoDiGioco" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TitolareSistema" type="xs:int" />
+        <xs:element minOccurs="0" name="ImportoMovimento" type="xs:int" />
+        <xs:element minOccurs="0" name="ListBonusPresenti" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="SaldoUtente" type="xs:int" />
+        <xs:element minOccurs="0" name="DataSaldo" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StornoMovimentazioneCreditoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="StornoMovimentazioneCreditoResult" nillable="true" type="q32:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StornoMovimentazioneCredito_V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="CausaleDiMovimento" type="q33:CAUSALE_MOVIMENTO" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="MezzoDiPagamento" type="q34:MEZZO_PAGAMENTO" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="TipoStorno" type="q35:TIPO_STORNO" />
+        <xs:element minOccurs="0" name="idRicevutaDaStornare" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ContoDiGioco" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TitolareSistema" type="xs:int" />
+        <xs:element minOccurs="0" name="ImportoMovimento" type="xs:int" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="ListBonusPresenti" nillable="true" type="q36:ArrayOfBonus" />
+        <xs:element minOccurs="0" name="SaldoUtente" type="xs:int" />
+        <xs:element minOccurs="0" name="DataSaldo" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StornoMovimentazioneCredito_V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="StornoMovimentazioneCredito_V2Result" nillable="true" type="q37:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaldoContoUtente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ContoDiGioco" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TitolareSistema" type="xs:int" />
+        <xs:element minOccurs="0" name="ListBonusPresenti" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="SaldoUtente" type="xs:int" />
+        <xs:element minOccurs="0" name="DataSaldo" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaldoContoUtenteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="SaldoContoUtenteResult" nillable="true" type="q38:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaldoContoUtente_V2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ContoDiGioco" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TitolareSistema" type="xs:int" />
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="ListBonusPresenti" nillable="true" type="q39:ArrayOfBonus" />
+        <xs:element minOccurs="0" name="SaldoUtente" type="xs:int" />
+        <xs:element minOccurs="0" name="DataSaldo" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaldoContoUtente_V2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="SaldoContoUtente_V2Result" nillable="true" type="q40:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RiepilogoOperazioniMovimentazione">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TitolareSistema" type="xs:int" />
+        <xs:element minOccurs="0" name="Data" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RiepilogoOperazioniMovimentazioneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="RiepilogoOperazioniMovimentazioneResult" nillable="true" type="q41:PgdaGatewayRiepilogoOperazioniMovimentazioneResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RiepilogoOperazioniServizio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Idtransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TitolareSistema" type="xs:int" />
+        <xs:element minOccurs="0" name="Data" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RiepilogoOperazioniServizioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="RiepilogoOperazioniServizioResult" nillable="true" type="q42:PgdaGatewayRiepilogoOperazioniServizioResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubRegistrazione2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Saldo" type="xs:int" />
+        <xs:element minOccurs="0" name="SaldoBonus" type="xs:int" />
+        <xs:element minOccurs="0" name="IdTransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodiceAgenzia" type="xs:int" />
+        <xs:element minOccurs="0" name="CodiceContratto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubRegistrazione2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="SubRegistrazione2Result" nillable="true" type="q43:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApriContoPersonaFisicaSemplificato">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodiceAgenzia" type="xs:int" />
+        <xs:element minOccurs="0" name="CodiceContratto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodiceFiscale" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Cognome" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Nome" nillable="true" type="xs:string" />
+        <xs:element xmlns:q44="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="Sesso" type="q44:char" />
+        <xs:element minOccurs="0" name="Comune_Nazione_Nascita" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProvinciaNascita" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DataNascita" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="CodiceProvinciaResidenza" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApriContoPersonaFisicaSemplificatoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="ApriContoPersonaFisicaSemplificatoResult" nillable="true" type="q45:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApriContoPersonaFisicaSemplificatoIntegrazione">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodiceAgenzia" type="xs:int" />
+        <xs:element minOccurs="0" name="CodiceContratto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DataRilascioDocumento" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="AutoritaRilascioDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LocalicaRilascioDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdTipoDocumento" type="xs:int" />
+        <xs:element minOccurs="0" name="IndirizzoResidenza" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ComuneResidenza" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProvinciaResidenza" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CapResidenza" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ApriContoPersonaFisicaSemplificatoIntegrazioneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="ApriContoPersonaFisicaSemplificatoIntegrazioneResult" nillable="true" type="q46:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ElencoContiGiocoSenzaSubregistrazione">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="DataRichiesta" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodiceAgenzia" type="xs:int" />
+        <xs:element minOccurs="0" name="stato" type="xs:byte" />
+        <xs:element minOccurs="0" name="inizio" type="xs:short" />
+        <xs:element minOccurs="0" name="fine" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ElencoContiGiocoSenzaSubregistrazioneResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="ElencoContiGiocoSenzaSubregistrazioneResult" nillable="true" type="q47:PgadGatewayElencoContiGiocoSenzaSubregistrazioneResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContoGiocoDormiente">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Saldo" type="xs:int" />
+        <xs:element minOccurs="0" name="IdTransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodiceAgenzia" type="xs:int" />
+        <xs:element minOccurs="0" name="CodiceContratto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DataDormiente" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ContoGiocoDormienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="ContoGiocoDormienteResult" nillable="true" type="q48:PgadGatewayResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ElencoContiGiocoDormienti">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdTransazione" type="xs:long" />
+        <xs:element minOccurs="0" name="PartitaIva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodiceAgenzia" type="xs:int" />
+        <xs:element minOccurs="0" name="inizio" type="xs:short" />
+        <xs:element minOccurs="0" name="fine" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ElencoContiGiocoDormientiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" minOccurs="0" name="ElencoContiGiocoDormientiResult" nillable="true" type="q49:PgadGatewayElencoContiGiocoDormientiResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

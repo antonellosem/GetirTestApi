@@ -1,0 +1,27 @@
+Creazione CSR e Chiavi Private
+
+>openssl req -new -newkey rsa:1024 -keyout pk_poste_firma.pem  -out csr_poste_firma.pem
+>Password: $0rb3tt0
+
+>openssl req -new -newkey rsa:1024 -keyout pk_poste_cifratura.pem  -out csr_poste_cifratura.pem
+>Password: $0rb3tt0
+
+Verifica Chiave Privata Firma:
+>openssl rsa -in pk_poste_firma.pem -text
+
+Verifica Chiave Privata Cifratura:
+>openssl rsa -in pk_poste_cifratura.pem -text
+
+Export in pkcs12 certificato cifratura
+>openssl pkcs12 -export -in postecifratura.cer -inkey pk_poste_cifratura.pem -out postecifratura.pfx
+
+Export in pkcs12 certificato firma
+>openssl pkcs12 -export -in postefirma.cer -inkey pk_poste_firma.pem -out postefirma.pfx
+
+
+--Decripta un messaggio con la chiave pubblica
+openssl smime -decrypt -inform DER -in file.encrypted -recip cifra.cer -inkey key.pem -out file.decrypted
+
+--Verifica ed elimina la firma di un pacchetto PKcs7 (Necessaria La CA del certificato in formato PEM)
+openssl smime -verify -inform DER -in file.decrypted -signer aams.cer -CAfile  ca.pem -noverify -out file.tar.gz
+

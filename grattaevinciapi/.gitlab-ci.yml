@@ -1,0 +1,536 @@
+variables:
+    APP_POOL_NAME: AppPoolName
+    PROJECT_PATH_NAME: ./folder/name.csproj
+    BUILD_TYPE_NAME_DEBUG: Debug
+    BUILD_TYPE_NAME_RELEASE: Release
+    BUILD_PROFILE_NAME_SVIL: Sviluppo
+    BUILD_PROFILE_NAME_QA: QA
+    BUILD_PROFILE_NAME_COLL: Staging
+    BUILD_PROFILE_NAME_PROD: Produzione
+    
+    
+    #DEVELOP_SERVER_NAME: \\EI1-WSSVIL01
+    DEVELOP_SERVER_COMPUTER_NAME: EI1-WSSVIL01.winco.local
+    DEVELOP_SERVER_FOLDER_API_PATH: \\EI1-WSSVIL01.winco.local\c$\inetpub\folderApi
+    DEVELOP_API_URL: https://apisviluppo.goldbet.it/index.html
+    DEVELOP_BASE_URL: apisviluppo.goldbet.it
+    
+    #STAGING_SERVER_NAME: \\SV-WSGOLDCOLL
+    STAGING_SERVER_COMPUTER_NAME: SV-WSGOLDCOLL.winco.local
+    STAGING_SERVER_FOLDER_API_PATH: \\SV-WSGOLDCOLL.winco.local\c$\inetpub\folderApi
+    STAGING_API_URL: https://apicollaudo.goldbet.it/index.html
+    STAGING_BASE_URL: apicollaudo.goldbet.it
+    
+    #QA_SERVER_NAME: \\EQ3-BACKEND00
+    QA_SERVER_COMPUTER_NAME: EQ3-BACKEND00.winco.local
+    QA_SERVER_FOLDER_API_PATH: \\EQ3-BACKEND00.winco.local\c$\inetpub\folderApi
+    QA_API_URL: https://apiqa.goldbet.it/index.html
+    QA_BASE_URL: apiqa.goldbet.it
+        
+    PRODUCTION_SERVER_FOLDER_API_PATH: \\ep0-deploy00.winco.local\Software_Deploy\folderApi
+    PRODUCTION_API_URL: https://api.goldbet.it/index.html
+        
+stages:
+  - echo variable
+  - build
+  - deploy
+  - recovery app pool
+  - test
+  - post test
+
+echo variable:
+    stage: echo variable
+    tags:
+        - NET-WINDOWS
+    image:
+        name: gitlab.lottomatica.com:5050/devtools/netsdk:6
+    script:
+        - echo "CI_COMMIT_BRANCH:" $CI_COMMIT_BRANCH
+        - echo "CI_COMMIT_REF_NAME:" $CI_COMMIT_REF_NAME        
+        - echo "CI_PIPELINE_SOURCE:" $CI_PIPELINE_SOURCE
+        - echo "CI_MERGE_REQUEST_SOURCE_BRANCH_NAME:" $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME
+        - echo "CI_EXTERNAL_PULL_REQUEST_SOURCE_BRANCH_NAME:" $CI_EXTERNAL_PULL_REQUEST_SOURCE_BRANCH_NAME
+        - echo "CI_EXTERNAL_PULL_REQUEST_TARGET_BRANCH_NAME:" $CI_EXTERNAL_PULL_REQUEST_TARGET_BRANCH_NAME        
+
+#BUILD
+.build_template: &buildApi
+    tags:
+        - NET-WINDOWS
+    stage: build
+    image:
+        name: gitlab.lottomatica.com:5050/devtools/netsdk:6
+    script:        
+        - echo "Restore Nuget Package"
+        - dotnet restore --source "https://baget.lottomatica.com/v3/index.json" --source "https://api.nuget.org/v3/index.json"
+        - echo "Building $CI_COMMIT_BRANCH branch API"
+        - dotnet publish $PROJECT_PATH_NAME -c $BUILD_TYPE -r win-x64 /p:PublishProfile=$BUILD_PROFILE -o ./publishAPI/        
+    artifacts:
+        paths:
+            - publishAPI/
+        expire_in: 2 days
+
+branch schedule:
+    <<: *buildApi
+    only:
+        #- $BRANCH_DEPLOY_RUN
+        - schedules
+        - $CI_COMMIT_REF_NAME =~ /feature/
+    #when: manual    
+    allow_failure: false
+    variables:        
+        BUILD_PROFILE: $BUILD_PROFILE_NAME_SVIL    
+        BUILD_TYPE: $BUILD_TYPE_NAME_DEBUG
+
+dev svil manual:
+    <<: *buildApi
+    only:
+        - develop
+    except:
+        - schedules
+    when: manual    
+    allow_failure: false
+    variables:        
+        BUILD_PROFILE: $BUILD_PROFILE_NAME_SVIL    
+        BUILD_TYPE: $BUILD_TYPE_NAME_DEBUG
+        
+release qa manual:
+    <<: *buildApi
+    only:    
+        - $CI_COMMIT_REF_NAME =~ /release/
+    except:
+        - schedules
+    when: manual    
+    allow_failure: false
+    variables:
+        BUILD_PROFILE: $BUILD_PROFILE_NAME_QA
+        BUILD_TYPE: $BUILD_TYPE_NAME_RELEASE
+
+release coll manual:
+    <<: *buildApi
+    only:    
+        - $CI_COMMIT_REF_NAME =~ /release/
+    except:
+        - schedules
+    when: manual    
+    allow_failure: false
+    variables:
+        BUILD_PROFILE: $BUILD_PROFILE_NAME_COLL
+        BUILD_TYPE: $BUILD_TYPE_NAME_RELEASE
+
+master prod manual:
+    <<: *buildApi
+    only:
+        - master
+        - merge_requests
+    when: manual    
+    allow_failure: false
+    variables:
+        BUILD_PROFILE: $BUILD_PROFILE_NAME_PROD
+        BUILD_TYPE: $BUILD_TYPE_NAME_RELEASE
+
+    
+#DEPLOY
+.deploy_api_template: &deployApi
+    tags:
+        - NET-WINDOWS
+    image:
+        name: gitlab.lottomatica.com:5050/devtools/netsdk:6    
+    script:
+        - net.exe use $SERVER_FOLDER_API_PATH $NETWORK_PASS_NUGET_LOCAL /USER:$NETWORK_USER_NUGET_LOCAL
+        - echo $PUBLISH_FOLDER
+        - $User = "$NETWORK_USER_NUGET_LOCAL"
+        - $PWord = ConvertTo-SecureString -String "$NETWORK_PASS_NUGET_LOCAL" -AsPlainText -Force
+        - $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User, $PWord        
+        # DEPLOY SU SERVER
+        - echo "Stop Application Pool $SERVER_COMPUTER_NAME"        
+        - invoke-Command -Credential $Credential -ComputerName $SERVER_COMPUTER_NAME -ScriptBlock {
+                if ( (Get-WebAppPoolState -Name $APP_POOL_NAME).Value -eq "Stopped" )
+                {
+                    Write-Host "AppPool already stopped"
+                }
+                else
+                {
+                    Write-Host "Shutting down the AppPool"
+
+                    Stop-WebAppPool -Name $APP_POOL_NAME
+                }}
+        - echo "Deploy on $SERVER_FOLDER_API_PATH"
+        - start-sleep -s 5
+        - echo "Create backup folder"
+        - copy-item "$SERVER_FOLDER_API_PATH" ./publishApiBackup/ -recurse
+        - echo "Delete file in server folder"
+        - remove-item "$SERVER_FOLDER_API_PATH\*" -recurse -force        
+        - start-sleep -s 5
+        - echo "Copy file $SERVER_COMPUTER_NAME"
+        - xcopy $PUBLISH_FOLDER\* "$SERVER_FOLDER_API_PATH\" /sy  
+        - start-sleep -s 5
+        - echo "Start Application pool $SERVER_COMPUTER_NAME"
+        - invoke-Command -Credential $Credential -ComputerName $SERVER_COMPUTER_NAME -ScriptBlock { Start-WebAppPool -Name $APP_POOL_NAME }
+    
+#   DEPLOY PARAMETRIC SCHEDULE -> SVILUPPO
+branch->svil schedule:
+    <<: *deployApi
+    stage: deploy
+    only:
+        #- $BRANCH_DEPLOY_RUN
+        - schedules
+        - $CI_COMMIT_REF_NAME =~ /feature/
+    when: manual    
+    allow_failure: false
+    environment:
+        name: Sviluppo API
+        url: $DEVELOP_API_URL
+    needs:
+    - job: branch schedule
+      optional: true
+    variables:
+        PUBLISH_FOLDER: publishAPI
+        APP_POOL_NAME: $APP_POOL_NAME
+        SERVER_FOLDER_API_PATH: $DEVELOP_SERVER_FOLDER_API_PATH
+        SERVER_COMPUTER_NAME: $DEVELOP_SERVER_COMPUTER_NAME        
+    artifacts:
+        paths:
+            - publishAPI_Backup/
+        expire_in: 2 days
+
+#   DEPLOY DEVELOP -> SVILUPPO
+dev->svil manual:
+    <<: *deployApi
+    stage: deploy
+    only:
+        - develop
+    except:
+        - schedules
+    when: manual    
+    allow_failure: false
+    environment:
+        name: Sviluppo API
+        url: $DEVELOP_API_URL
+    needs:
+    - job: dev svil manual
+      optional: true
+    variables:
+        PUBLISH_FOLDER: publishAPI
+        APP_POOL_NAME: $APP_POOL_NAME
+        SERVER_FOLDER_API_PATH: $DEVELOP_SERVER_FOLDER_API_PATH
+        SERVER_COMPUTER_NAME: $DEVELOP_SERVER_COMPUTER_NAME        
+    artifacts:
+        paths:
+            - publishAPI_Backup/
+        expire_in: 2 days
+
+#   DEPLOY RELEASE -> QA
+rel->qa manual:
+    <<: *deployApi
+    stage: deploy
+    only:    
+        - $CI_COMMIT_REF_NAME =~ /release/
+    except:
+        - schedules
+    when: manual    
+    allow_failure: false
+    environment:
+        name: QA API
+        url: $QA_API_URL
+    needs:
+    - job: release qa manual
+      optional: true
+    variables:
+        PUBLISH_FOLDER: publishAPI
+        APP_POOL_NAME: $APP_POOL_NAME
+        SERVER_FOLDER_API_PATH: $QA_SERVER_FOLDER_API_PATH
+        SERVER_COMPUTER_NAME: $QA_SERVER_COMPUTER_NAME        
+    artifacts:
+        paths:
+            - publishAPI_Backup/
+        expire_in: 2 days
+
+#   DEPLOY RELEASE -> COLLAUDO
+rel->coll manual:
+    <<: *deployApi
+    stage: deploy
+    only:    
+        - $CI_COMMIT_REF_NAME =~ /release/
+    except:
+        - schedules
+    when: manual    
+    allow_failure: false
+    environment:
+        name: Collaudo API
+        url: $STAGING_API_URL
+    needs:
+    - job: release coll manual
+      optional: true
+    variables:
+        PUBLISH_FOLDER: publishAPI
+        APP_POOL_NAME: $APP_POOL_NAME
+        SERVER_FOLDER_API_PATH: $STAGING_SERVER_FOLDER_API_PATH
+        SERVER_COMPUTER_NAME: $STAGING_SERVER_COMPUTER_NAME        
+    artifacts:
+        paths:
+            - publishAPI_Backup/
+        expire_in: 2 days
+
+#   DEPLOY MASTER -> PROD
+master->prod:
+    tags:
+        - NET-WINDOWS
+    stage: deploy
+    only:
+        - master
+        - merge_request_event
+    needs:
+    - job: master prod manual
+      optional: true
+    when: manual
+    allow_failure: true
+    environment:
+        name: Produzione API
+        url: $PRODUCTION_API_URL
+    script:
+        - echo "Deploy on $PRODUCTION_SERVER_FOLDER_API_PATH"
+        - echo "Copy file in server folder"
+        - net.exe use $PRODUCTION_SERVER_FOLDER_API_PATH $NETWORK_PASS_NUGET_LOCAL /USER:$NETWORK_USER_NUGET_LOCAL
+        # - dir $PRODUCTION_SERVER_FOLDER_API_PATH
+        - remove-item "$PRODUCTION_SERVER_FOLDER_API_PATH\*" -recurse -force        
+        - xcopy publishAPI\* "$PRODUCTION_SERVER_FOLDER_API_PATH\" /sy 
+        
+#RECOVERY APPLICATION POOL
+.recovery_app_pool_template: &recoveryAppPool
+    stage: recovery app pool
+    tags:
+        - NET-WINDOWS
+    image:
+        name: gitlab.lottomatica.com:5050/devtools/netsdk:6    
+    when: 
+        on_failure
+    script:
+        - echo "Recovery Api for Error"
+        - $User = "$NETWORK_USER_NUGET_LOCAL"
+        - $PWord = ConvertTo-SecureString -String "$NETWORK_PASS_NUGET_LOCAL" -AsPlainText -Force
+        - $Credential = New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $User, $PWord        
+        - echo "Start Application pool $SERVER_COMPUTER_NAME"
+        - invoke-Command -Credential $Credential -ComputerName $SERVER_COMPUTER_NAME -ScriptBlock { Start-WebAppPool -Name $APP_POOL_NAME }
+
+#   RECOVERY APP POOL SCHEDULE -> SVIL
+svil schedule recovery:
+    <<: *recoveryAppPool
+    only:
+        #- $BRANCH_DEPLOY_RUN
+        - schedules
+        - $CI_COMMIT_REF_NAME =~ /feature/
+    environment:
+        name: Sviluppo API
+        url: $DEVELOP_API_URL
+    needs:
+    - job: branch->svil schedule
+      optional: true
+    variables:
+        APP_POOL_NAME: $APP_POOL_NAME
+        SERVER_COMPUTER_NAME: $DEVELOP_SERVER_COMPUTER_NAME 
+
+#   RECOVERY APP POOL -> SVIL
+svil recovery:
+    <<: *recoveryAppPool
+    only:
+        - develop
+    environment:
+        name: Sviluppo API
+        url: $DEVELOP_API_URL
+    needs:
+    - job: dev->svil manual
+      optional: true
+    variables:
+        APP_POOL_NAME: $APP_POOL_NAME
+        SERVER_COMPUTER_NAME: $DEVELOP_SERVER_COMPUTER_NAME 
+
+#   RECOVERY APP POOL -> QA
+qa recovery:
+    <<: *recoveryAppPool
+    only:
+        - $CI_COMMIT_REF_NAME =~ /release/
+    environment:
+        name: QA API
+        url: $QA_API_URL
+    needs:
+    - job: rel->qa manual
+      optional: true
+    variables:
+        APP_POOL_NAME: $APP_POOL_NAME
+        SERVER_COMPUTER_NAME: $QA_SERVER_COMPUTER_NAME 
+
+#   RECOVERY APP POOL -> COLL
+coll recovery:
+    <<: *recoveryAppPool
+    only:
+        - $CI_COMMIT_REF_NAME =~ /release/
+    environment:
+        name: Collaudo API
+        url: $STAGING_API_URL
+    needs:
+    - job: rel->coll manual
+      optional: true
+    variables:
+        APP_POOL_NAME: $APP_POOL_NAME
+        SERVER_COMPUTER_NAME: $STAGING_SERVER_COMPUTER_NAME 
+
+#TESTING API POSTMAN
+.api_testing_postman_template: &apiTestPostman
+    stage: test
+    image:
+        name: vdespa/newman
+        entrypoint: [""]
+    script:
+        - newman --version
+        - newman run "$POSTMAN_COLLATION" --global-var "PROTOCOL=$PROTOCOL" --global-var "BASE_URL=$BASE_URL" --insecure --reporters cli,htmlextra,junit --reporter-htmlextra-export "newman/report.html" --reporter-junit-export "newman/report.xml"
+        - echo $?
+        # - $CHECK_DEPLOY_API = $?
+    artifacts:
+        when: always
+        expire_in: 1 week
+        paths:
+            - newman/
+        reports:
+            junit: newman/report.xml
+
+#   TESTING API POSTMAN SCHEDULE -> SVIL
+svil schedule test:
+    <<: *apiTestPostman
+    only:
+        #- $BRANCH_DEPLOY_RUN
+        - schedules
+        - $CI_COMMIT_REF_NAME =~ /feature/
+    needs:
+    - job: branch->svil schedule
+      optional: true
+    when: 
+        on_success
+    variables:
+        POSTMAN_COLLATION: API(healtcheck get).postman_collection.json
+        PROTOCOL: "https"
+        BASE_URL: $DEVELOP_BASE_URL
+        
+#   TESTING API POSTMAN -> SVIL
+svil test:
+    <<: *apiTestPostman
+    only:
+        - develop
+    needs:
+    - job: dev->svil manual
+      optional: true
+    when: 
+        on_success
+    variables:
+        POSTMAN_COLLATION: API(healtcheck get).postman_collection.json
+        PROTOCOL: "https"
+        BASE_URL: $DEVELOP_BASE_URL
+        
+#   TESTING API POSTMAN -> QA
+qa test:
+    <<: *apiTestPostman
+    only:    
+        - $CI_COMMIT_REF_NAME =~ /release/
+    needs:
+    - job: rel->qa manual
+      optional: true
+    when: 
+        on_success
+    variables:
+        POSTMAN_COLLATION: API(healtcheck get).postman_collection.json
+        PROTOCOL: "https"
+        BASE_URL: $QA_BASE_URL
+        
+#   TESTING API POSTMAN -> COLL
+coll test:
+    <<: *apiTestPostman
+    only:    
+        - $CI_COMMIT_REF_NAME =~ /release/
+    needs:
+    - job: rel->coll manual
+      optional: true
+    when: 
+        on_success
+    variables:
+        POSTMAN_COLLATION: API(healtcheck get).postman_collection.json
+        PROTOCOL: "https"
+        BASE_URL: $STAGING_BASE_URL
+        
+#ROLLBACK DEPLOY (STESSO TEMPLATE DEL DEPLOY)
+#   ROLLBACK DEPLOY -> SCHEDULE
+schedule rollback:
+    <<: *deployApi
+    stage: post test
+    only:
+        #- $BRANCH_DEPLOY_RUN
+        - schedules
+        - $CI_COMMIT_REF_NAME =~ /feature/
+    needs:
+    - job: branch->svil schedule
+      optional: true
+    - job: svil schedule test
+      optional: true
+    when: 
+        on_failure
+    variables:
+        PUBLISH_FOLDER: publishAPI_Backup
+        APP_POOL_NAME: $APP_POOL_NAME
+        SERVER_FOLDER_API_PATH: $DEVELOP_SERVER_FOLDER_API_PATH
+        SERVER_COMPUTER_NAME: $DEVELOP_SERVER_COMPUTER_NAME 
+
+#   ROLLBACK DEPLOY -> SVIL
+svil rollback:
+    <<: *deployApi
+    stage: post test
+    only:
+        - develop
+    needs:
+    - job: dev->svil manual
+      optional: true
+    - job: svil test
+      optional: true
+    when: 
+        on_failure
+    variables:
+        PUBLISH_FOLDER: publishAPI_Backup
+        APP_POOL_NAME: $APP_POOL_NAME
+        SERVER_FOLDER_API_PATH: $DEVELOP_SERVER_FOLDER_API_PATH
+        SERVER_COMPUTER_NAME: $DEVELOP_SERVER_COMPUTER_NAME 
+
+#   ROLLBACK DEPLOY -> QA
+qa rollback:
+    <<: *deployApi
+    stage: post test
+    only:    
+        - $CI_COMMIT_REF_NAME =~ /release/
+    needs:
+    - job: rel->qa manual
+      optional: true
+    - job: qa test
+      optional: true
+    when: 
+        on_failure
+    variables:
+        PUBLISH_FOLDER: publishAPI_Backup
+        APP_POOL_NAME: $APP_POOL_NAME
+        SERVER_FOLDER_API_PATH: $QA_SERVER_FOLDER_API_PATH
+        SERVER_COMPUTER_NAME: $QA_SERVER_COMPUTER_NAME 
+
+#   ROLLBACK DEPLOY -> COLL
+coll rollback:
+    <<: *deployApi
+    stage: post test
+    only:    
+        - $CI_COMMIT_REF_NAME =~ /release/
+    needs:
+    - job: rel->coll manual
+      optional: true
+    - job: coll test
+      optional: true
+    when: 
+        on_failure
+    variables:
+        PUBLISH_FOLDER: publishAPI_Backup
+        APP_POOL_NAME: $APP_POOL_NAME
+        SERVER_FOLDER_API_PATH: $STAGING_SERVER_FOLDER_API_PATH
+        SERVER_COMPUTER_NAME: $STAGING_SERVER_COMPUTER_NAME 
+

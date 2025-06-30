@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<anag_conti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <id_fornitura>73</id_fornitura>
+  <num_record>1</num_record>
+  <conto>
+    <prog>36266</prog>
+    <nickname>RFMPC</nickname>
+    <email>beks78@live.it</email>
+    <id_conto>4098-0035371</id_conto>
+    <data_attivazione>2009-02-15T11:32:00</data_attivazione>
+    <cod_rete>2</cod_rete>
+    <cod_conc>4098</cod_conc>
+    <soggetto>
+      <persona_fisica>
+        <id_soggetto>FRLRSN78D07D773D</id_soggetto>
+        <nome>ROSSANO</nome>
+        <cognome>FIORELLI</cognome>
+        <sesso>M</sesso>
+        <data_nascita>1978-04-07</data_nascita>
+        <comune_nascita>FRASCATI</comune_nascita>
+        <prov_nascita>RM</prov_nascita>
+        <prov_residenza>RM</prov_residenza>
+      </persona_fisica>
+    </soggetto>
+  </conto>
+</anag_conti>

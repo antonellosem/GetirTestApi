@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PgadCommunication.Pgad" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PgadCommunication.Pgad" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:55984/PGADService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
+  <xs:complexType name="ArrayOfDettaglioOperazioniMovimentazione">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DettaglioOperazioniMovimentazione" nillable="true" type="tns:DettaglioOperazioniMovimentazione" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDettaglioOperazioniMovimentazione" nillable="true" type="tns:ArrayOfDettaglioOperazioniMovimentazione" />
+  <xs:complexType name="DettaglioOperazioniMovimentazione">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q1:PropertyChangedEventHandler" />
+      <xs:element name="causaleMovimentoField" type="xs:byte" />
+      <xs:element name="numeroOperazioniField" type="xs:int" />
+      <xs:element name="totaleImportoField" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DettaglioOperazioniMovimentazione" nillable="true" type="tns:DettaglioOperazioniMovimentazione" />
+  <xs:complexType name="ArrayOfDettaglioOperazioniServizio">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DettaglioOperazioniServizio" nillable="true" type="tns:DettaglioOperazioniServizio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDettaglioOperazioniServizio" nillable="true" type="tns:ArrayOfDettaglioOperazioniServizio" />
+  <xs:complexType name="DettaglioOperazioniServizio">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.ComponentModel" name="PropertyChanged" nillable="true" type="q2:PropertyChangedEventHandler" />
+      <xs:element name="causaleServizioField" type="xs:byte" />
+      <xs:element name="numeroOperazioniField" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DettaglioOperazioniServizio" nillable="true" type="tns:DettaglioOperazioniServizio" />
+</xs:schema>

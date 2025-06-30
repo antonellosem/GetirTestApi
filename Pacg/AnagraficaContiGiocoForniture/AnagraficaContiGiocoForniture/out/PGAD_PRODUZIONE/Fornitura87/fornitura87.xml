@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<anag_conti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <id_fornitura>87</id_fornitura>
+  <num_record>1</num_record>
+  <conto>
+    <prog>162332</prog>
+    <nickname>cobra70</nickname>
+    <email>massimo.killer@hotmail.it</email>
+    <id_conto>4098-0125250</id_conto>
+    <data_attivazione>2011-03-17T17:45:00</data_attivazione>
+    <cod_rete>2</cod_rete>
+    <cod_conc>4098</cod_conc>
+    <soggetto>
+      <persona_fisica>
+        <id_soggetto>BRNMSM70M19F839W</id_soggetto>
+        <nome>MASSIMO</nome>
+        <cognome>BRUNO</cognome>
+        <sesso>M</sesso>
+        <data_nascita>1970-08-19</data_nascita>
+        <comune_nascita>NAPOLI</comune_nascita>
+        <prov_nascita>NA</prov_nascita>
+        <prov_residenza>MI</prov_residenza>
+      </persona_fisica>
+    </soggetto>
+  </conto>
+</anag_conti>

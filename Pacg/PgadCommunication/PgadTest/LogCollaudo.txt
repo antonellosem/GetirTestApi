@@ -1,0 +1,99 @@
+---------------------
+Inivo Apertura Conto
+Codice Fiscale FRRNTN77E15D960A Codice Conto 4098-000001 
+IdTransazione 129533792893647199 Ricevuta AAMS  Esito 1025 Descrizione Operazione momentaneamente interdetta
+-------------------------
+---------------------
+Inivo Apertura Conto
+Codice Fiscale FRRNTN77E15D960A Codice Conto 4098-000001 
+IdTransazione 129533793605757199 Ricevuta AAMS  Esito 1025 Descrizione Operazione momentaneamente interdetta
+-------------------------
+---------------------
+Inivo Apertura Conto
+Codice Fiscale FRRNTN77E15D960A Codice Conto 4098-000001 
+IdTransazione 129533793674877199 Ricevuta AAMS dc07db061800000000000002f Esito 1024 Descrizione Esito ok
+-------------------------
+---------------------
+Movimento ContoGioco Codice Conto  Causale 1 Mezzo 2 Importo 5000
+IdTransazione 129533797140927199 Ricevuta AAMS dc07db0618000000000000032 Esito 1024 Descrizione Esito ok
+-------------------------
+---------------------
+Movimento ContoGioco Codice Conto  Causale 1 Mezzo 2 Importo 10000
+IdTransazione 129533799070197199 Ricevuta AAMS dc07db0618000000000000033 Esito 1024 Descrizione Esito ok
+-------------------------
+---------------------
+Movimento ContoGioco Codice Conto  Causale 2 Mezzo 2 Importo 10000
+IdTransazione 129533799656917199 Ricevuta AAMS dc07db0618000000000000034 Esito 1024 Descrizione Esito ok
+-------------------------
+---------------------
+Movimento Bonus ContoGioco Codice Conto  Causale 5 Famiglia 0 Gioco 0 Importo 3000
+IdTransazione 129533800338847199 Ricevuta AAMS dc07db0618000000000000035 Esito 1024 Descrizione Esito ok
+-------------------------
+---------------------
+Movimento Bonus ContoGioco Codice Conto  Causale 5 Famiglia 6 Gioco 0 Importo 2000
+IdTransazione 129533801149337199 Ricevuta AAMS dc07db0618000000000000036 Esito 1024 Descrizione Esito ok
+-------------------------
+---------------------
+Movimento Bonus ContoGioco Codice Conto  Causale 6 Famiglia 6 Gioco 0 Importo 2000
+IdTransazione 129533801719207199 Ricevuta AAMS dc07db0618000000000000037 Esito 1024 Descrizione Esito ok
+-------------------------
+---------------------
+Movimento ContoGioco Codice Conto  Causale 1 Mezzo 2 Importo 10000
+IdTransazione 129533802508117199 Ricevuta AAMS dc07db0618000000000000038 Esito 1024 Descrizione Esito ok
+-------------------------
+---------------------
+Info Stato Conto 
+ Cnc 4098, Codice Conto 4098-000001 
+IdTransazione 129533803061327199 Ricevuta AAMS dc07db0618000000000000039 Esito 1024 Descrizione Esito ok Causale 0 Stato 1 CodiceConto 4098-000001
+-------------------------
+---------------------
+Saldo ContoGioco Codice Conto  Saldo 18000 SaldoBonus3000 Dettagli 1
+IdTransazione 129533803300027199 Ricevuta AAMS dc07db061800000000000003c Esito 1024 Descrizione Esito ok
+-------------------------
+---------------------
+Cambio Residenza 
+ Cnc 4098, Codice Conto 4098-000001 Residenza MI 
+IdTransazione 129533804030027199 Ricevuta AAMS dc07db061800000000000003d Esito 1024 Descrizione Esito ok
+-------------------------
+---------------------
+Inivo Apertura Conto
+Codice Fiscale RSUNIO63D02Z140S Codice Conto 4098-000002 
+IdTransazione 129533805622997199 Ricevuta AAMS dc07db061800000000000003f Esito 1024 Descrizione Esito ok
+-------------------------
+---------------------
+SubRegistrazione 
+ Cnc: 4098 Codice Conto 4098-000002  
+IdTransazione 129533808350297199 Ricevuta AAMS  Esito 1233 Descrizione Non autorizzato
+-------------------------
+---------------------
+Info Stato Conto 
+ Cnc 4098, Codice Conto 4098-000002 
+IdTransazione 129533809061147199 Ricevuta AAMS dc07db0618000000000000043 Esito 1024 Descrizione Esito ok Causale 1 Stato 2 CodiceConto 4098-000002
+-------------------------
+---------------------
+Cambio Stato 
+ Cnc 4098, Codice Conto 4098-000002 Causale RICHIESTO_DAL_CONCESSIONARIO Stato APERTO 
+IdTransazione 129533810166317199 Ricevuta AAMS dc07db0618000000000000044 Esito 1024 Descrizione Esito ok
+-------------------------
+---------------------
+SubRegistrazione 
+ Cnc: 4098 Codice Conto 4098-000002  
+IdTransazione 129533810864027199 Ricevuta AAMS dc07db0618000000000000047 Esito 1024 Descrizione Esito ok
+-------------------------
+---------------------
+Cambio Stato 
+ Cnc 4098, Codice Conto 4098-000002 Causale RICHIESTO_DAL_CONCESSIONARIO Stato CHIUSO 
+IdTransazione 129533811374887199 Ricevuta AAMS dc07db0618000000000000048 Esito 1024 Descrizione Esito ok
+-------------------------
+
+---------------------
+Apertura Persona Giuridica Codice Conto 4098-000003 
+IdTransazione 129533813284697199 Ricevuta AAMS dc07db061800000000000004a Esito 1024 Descrizione Esito ok
+
+-------------------------
+---------------------
+Info Stato Conto 
+ Cnc 4098, Codice Conto 4098-000003 
+IdTransazione 129533814941067199 Ricevuta AAMS dc07db061800000000000004b Esito 1024 Descrizione Esito ok Causale 0 Stato 1 CodiceConto 4098-000003
+
+-------------------------

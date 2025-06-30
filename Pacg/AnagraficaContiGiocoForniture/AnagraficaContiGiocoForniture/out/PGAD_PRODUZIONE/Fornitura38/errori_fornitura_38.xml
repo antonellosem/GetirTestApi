@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE errori [
+  <!ELEMENT errori (id_fornitura, data_invio, num_conti_ok, errore*)>
+  <!ELEMENT id_fornitura (#PCDATA)>
+  <!ELEMENT data_invio (#PCDATA)>
+  <!ELEMENT num_conti_ok (#PCDATA)>
+  <!ELEMENT errore (prog, code, descr?, type?, output?)>
+  <!ELEMENT prog (#PCDATA)>
+  <!ELEMENT code (#PCDATA)>
+  <!ELEMENT descr (#PCDATA)>
+  <!ELEMENT type (#PCDATA)>
+  <!ELEMENT output (#PCDATA)>
+]>
+<errori>
+  <id_fornitura>38</id_fornitura>
+  <data_invio>2011-07-05</data_invio>
+  <num_conti_ok>146</num_conti_ok>
+  <errore>
+    <prog>32824</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>33100</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>33616</prog>
+    <code>****</code>
+    <descr>ERRORE DIAGNOSTICO</descr>
+    <type>ERROR</type>
+    <output><![CDATA[-Il CF richesto è formalmente errato]]></output>
+  </errore>
+  <errore>
+    <prog>33893</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>34623</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>35233</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>35361</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>35796</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>35830</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>37033</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>37404</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>37641</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>38064</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>39864</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>42664</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>43090</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>44231</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>44537</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>45583</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>46658</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>47828</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>48705</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in id_soggetto]]></output>
+  </errore>
+  <errore>
+    <prog>49145</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>50166</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>50521</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>51080</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>52077</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>52422</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>52449</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>52757</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>53047</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>53546</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>53877</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>54828</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>55292</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>56506</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>57143</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>60426</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>62083</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>69320</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>71428</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>72073</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>72115</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>72209</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>72504</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>73325</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>73613</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>73808</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>73862</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>74423</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>76888</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+  <errore>
+    <prog>77445</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>77550</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>78261</prog>
+    <code>-10</code>
+    <descr>ERRORE FORMALE DEL RECORD (FORMATTAZIONE DELLA DATA, CAMPI, ECC.)</descr>
+    <type>ERROR</type>
+    <output><![CDATA[Caratteri non ammessi in comune_nascita]]></output>
+  </errore>
+</errori>

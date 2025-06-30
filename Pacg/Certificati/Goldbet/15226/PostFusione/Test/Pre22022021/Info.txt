@@ -1,0 +1,6 @@
+Tipo Certificato: Protocolli di Gioco (PACG,PGDA, PBAD, PBDS)
+Dn: ou=conti di gioco, o=AAMS, c=IT
+Common name: 09255551005-01
+Serial Number Cert Firma: 5529784290093868219
+Serial Number Cert Cifra: 2005960674952631795
+Status: VALIDO

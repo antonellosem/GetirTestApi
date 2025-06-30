@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99AE1F7D-BFC7-49A4-9262-738ED0DF47BB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PgadCommunication</RootNamespace>
+    <AssemblyName>PgadCommunication</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=9.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\AutoMapper.9.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\..\PGADService\packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\Dapper.2.0.30\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.FluentMap, Version=1.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\Dapper.FluentMap.1.8.0\lib\net451\Dapper.FluentMap.dll</HintPath>
+    </Reference>
+    <Reference Include="Gamenet.Cache, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\Gamenet.Cache.1.0.2-beta0676\lib\netstandard2.0\Gamenet.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="Gamenet.Common, Version=0.1.2.10, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\Gamenet.Common.1.0.2-beta0888\lib\netstandard2.0\Gamenet.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Gamenet.Infrastructure, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\Gamenet.Infrastructure.1.0.2-beta0885\lib\netstandard2.0\Gamenet.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Gamenet.Logger, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\Gamenet.Logger.1.0.2-beta0676\lib\netstandard2.0\Gamenet.Logger.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.11.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\Google.Protobuf.3.11.4\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="IntralotWebLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\IntralotWebLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\Microsoft.Extensions.Configuration.3.1.2\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\Microsoft.Extensions.Configuration.Abstractions.3.1.2\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\Microsoft.Extensions.Configuration.Binder.3.1.2\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\Microsoft.Extensions.DependencyInjection.3.1.2\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\Microsoft.Extensions.DependencyInjection.Abstractions.3.1.2\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\Microsoft.Extensions.Logging.3.1.2\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\Microsoft.Extensions.Logging.Abstractions.3.1.2\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\Microsoft.Extensions.Options.3.1.2\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\Microsoft.Extensions.Primitives.3.1.2\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\MySql.Data.8.0.19\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\NLog.4.6.8\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog.Extensions.Logging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\NLog.Extensions.Logging.1.6.1\lib\net461\NLog.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="PgadCommon, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\PgadCommon.1.1.0-serializzazione-0001\lib\netstandard2.0\PgadCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="PgadData, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\PgadData.1.1.0-serializzazione-0004\lib\netstandard2.0\PgadData.dll</HintPath>
+    </Reference>
+    <Reference Include="Pipelines.Sockets.Unofficial, Version=1.0.0.0, Culture=neutral, PublicKeyToken=42ea0a778e13fbe2, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\Pipelines.Sockets.Unofficial.2.1.1\lib\net472\Pipelines.Sockets.Unofficial.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.Redis, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c219ff1ca8c2ce46, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\StackExchange.Redis.2.0.601\lib\net472\StackExchange.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\System.Data.SqlClient.4.8.1\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\System.Diagnostics.PerformanceCounter.4.7.0\lib\net461\System.Diagnostics.PerformanceCounter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\System.IO.Pipelines.4.7.0\lib\netstandard2.0\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Channels, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\System.Threading.Channels.4.7.0\lib\netstandard2.0\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\PGADService\packages\System.Threading.Tasks.Extensions.4.5.3\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractPgadGateway.cs" />
+    <Compile Include="Business\Bonus.cs" />
+    <Compile Include="Contracts\Requests\MessaggioInterrogazionePostaElettronica.cs" />
+    <Compile Include="Contracts\Requests\MessaggioInterrogazioneProvinciaResidenza.cs" />
+    <Compile Include="Contracts\Requests\MessaggioInterrogazionePseudonimo.cs" />
+    <Compile Include="Contracts\Requests\MessaggioInterrogazioneStoriaSoggettoAutoescluso.cs" />
+    <Compile Include="Contracts\Responses\Errors\PgadGatewayAperturaContoPersonaFisica2Error.cs" />
+    <Compile Include="Contracts\Responses\Errors\PgadGatewayGenericError.cs" />
+    <Compile Include="Contracts\Responses\Errors\PgadGatewayInterrogazioneEstremiDocumentoTitolareGenericError.cs" />
+    <Compile Include="Contracts\Responses\Errors\PgadGatewayInterrogazioneSoggettoAutoesclusoGenericError.cs" />
+    <Compile Include="Contracts\Responses\Errors\PgadGatewayMessaggioAggiornaLimiteGenericError.cs" />
+    <Compile Include="Contracts\Responses\Errors\PgadGatewayMessaggioAggiornaPostaElettronicaContoDiGiocoGenericError.cs" />
+    <Compile Include="Contracts\Responses\Errors\PgadGatewayMessaggioAggiornaPseudonimoContoDiGiocoGenericError.cs" />
+    <Compile Include="Contracts\Responses\Errors\PgadGatewayMessaggioElencoContiAutoesclusiError.cs" />
+    <Compile Include="Contracts\Responses\Errors\PgadGatewayMessaggioGestioneAutoesclusioneTrasversaleError.cs" />
+    <Compile Include="Contracts\Responses\Errors\PgadGatewayMessaggioInterrogazioneLimitiGenericError.cs" />
+    <Compile Include="Contracts\Responses\Errors\PgadGatewayStatoGenericError.cs" />
+    <Compile Include="Contracts\Responses\Errors\PgdaGatewayRiepilogoOperazioniMovimentazioneGenericError.cs" />
+    <Compile Include="Contracts\Responses\Errors\PgdaGatewayRiepilogoOperazioniServizioGenericError.cs" />
+    <Compile Include="Contracts\Requests\HeaderPgad.cs" />
+    <Compile Include="Contracts\Requests\MessaggioAggiornaLimite.cs" />
+    <Compile Include="Contracts\Requests\MessaggioAggiornaPostaElettronicaContoDiGioco.cs" />
+    <Compile Include="Contracts\Requests\MessaggioContoDormiente.cs" />
+    <Compile Include="Contracts\Requests\MessaggioAggiornaPseudonimoContoDiGioco.cs" />
+    <Compile Include="Contracts\Requests\MessaggioLimite.cs" />
+    <Compile Include="Contracts\Requests\MessaggioElencoContiAutoesclusi.cs" />
+    <Compile Include="Contracts\Requests\MessaggioElencoContiGiocoDormienti.cs" />
+    <Compile Include="Contracts\Requests\MessaggioElencoContiGiocoSenzaSubregistrazione.cs" />
+    <Compile Include="Contracts\Requests\MessaggioGestioneAutoesclusioneTrasversale.cs" />
+    <Compile Include="Contracts\Requests\MessaggioInterrogazioneEstremiDocumentoTitolare.cs" />
+    <Compile Include="Contracts\Requests\MessaggioInterrogazioneLimiti.cs" />
+    <Compile Include="Contracts\Requests\MessaggioInterrogazioneSoggettoAutoescluso.cs" />
+    <Compile Include="Contracts\Requests\MessaggioPersonaFisica2.cs" />
+    <Compile Include="Contracts\Requests\MessaggioSubRegistrazione2.cs" />
+    <Compile Include="Contracts\Requests\MessaggioStornoMovimentoConto.cs" />
+    <Compile Include="Contracts\Requests\MessaggioRiepilogoOperazioniServizio.cs" />
+    <Compile Include="Contracts\Requests\MessaggioRiepilogoOperazioniMovimentazione.cs" />
+    <Compile Include="Contracts\Requests\MessaggioAggiornamentoDocumento.cs" />
+    <Compile Include="Contracts\Requests\MessaggioMigrazioneConto.cs" />
+    <Compile Include="Contracts\Requests\MessaggioCambioStatoConto.cs" />
+    <Compile Include="Contracts\Requests\MessaggioDettaglioBonus.cs" />
+    <Compile Include="Contracts\Requests\MessaggioModificaResidenza.cs" />
+    <Compile Include="Contracts\Requests\MessaggioMovimentoBonus.cs" />
+    <Compile Include="Contracts\Requests\MessaggioMovimentoConto.cs" />
+    <Compile Include="Contracts\Requests\MessaggioPersonaGiuridica.cs" />
+    <Compile Include="Contracts\Requests\MessaggioPGAD.cs" />
+    <Compile Include="Contracts\Requests\MessaggioSaldoContoGioco.cs" />
+    <Compile Include="Contracts\Requests\MessaggioStatoConto.cs" />
+    <Compile Include="Contracts\Requests\MessaggiPGADException.cs" />
+    <Compile Include="Contracts\Responses\PgadGatewayAggiornaLimiteResponse.cs" />
+    <Compile Include="Contracts\Responses\PgadGatewayAperturaContoPersonaFisica2Response.cs" />
+    <Compile Include="Contracts\Responses\PgadGatewayElencoContiAutoesclusiResponse.cs" />
+    <Compile Include="Contracts\Responses\PgadGatewayElencoContiGiocoDormientiResponse.cs" />
+    <Compile Include="Contracts\Responses\PgadGatewayElencoContiGiocoSenzaSubregistrazioneResponse.cs" />
+    <Compile Include="Contracts\Responses\PgadGatewayGestioneAutoesclusioneTrasversaleResponse.cs" />
+    <Compile Include="Contracts\Responses\PgadGatewayInterrogazioneEstremiDocumentoResponse.cs" />
+    <Compile Include="Contracts\Responses\PgadGatewayInterrogazioneLimitiResponse.cs" />
+    <Compile Include="Contracts\Responses\PgadGatewayInterrogazionePostaElettronicaResponse.cs" />
+    <Compile Include="Contracts\Responses\PgadGatewayInterrogazioneProvinciaResidenzaResponse.cs" />
+    <Compile Include="Contracts\Responses\PgadGatewayInterrogazionePseudonimoResponse.cs" />
+    <Compile Include="Contracts\Responses\PgadGatewayInterrogazioneSoggettoAutoesclusoResponse.cs" />
+    <Compile Include="Contracts\Responses\PgadGatewayInterrogazioneStoriaSoggettoAutoesclusoResponse.cs" />
+    <Compile Include="Contracts\Responses\PgadGatewayMessaggioAggiornaPostaElettronicaContoDiGiocoResponse.cs" />
+    <Compile Include="Contracts\Responses\PgadGatewayMessaggioAggiornaPseudonimoContoDiGiocoResponse.cs" />
+    <Compile Include="Contracts\Responses\PgadGatewayResponse.cs" />
+    <Compile Include="Contracts\Responses\PgadGatewayStatoResponse.cs" />
+    <Compile Include="Contracts\Responses\PgdaGatewayRiepilogoOperazioniMovimentazioneResponse.cs" />
+    <Compile Include="Contracts\Responses\PgdaGatewayRiepilogoOperazioniServizioResponse.cs" />
+    <Compile Include="Configuration\Config.cs" />
+    <Compile Include="Configuration\X509Manager.cs" />
+    <Compile Include="Configuration\X509ManagerException.cs" />
+    <Compile Include="CustomMessageEncoder\ConfigurationStrings.cs" />
+    <Compile Include="CustomMessageEncoder\MessageVersionConverter.cs" />
+    <Compile Include="CustomMessageEncoder\PgadClientCredentials.cs" />
+    <Compile Include="CustomMessageEncoder\PgadClientCredentialsSecurityTokenManager.cs" />
+    <Compile Include="Exceptions\PgadFaultException.cs" />
+    <Compile Include="CustomMessageEncoder\PgadProxyInspector.cs" />
+    <Compile Include="Exceptions\PgadProxyNotCreated.cs" />
+    <Compile Include="Exceptions\PgadSSLSogeiException.cs" />
+    <Compile Include="CustomMessageEncoder\PgadTextMessageBindingElement.cs" />
+    <Compile Include="CustomMessageEncoder\PgadTextMessageEncoderFactory.cs" />
+    <Compile Include="CustomMessageEncoder\PgadTextMessageEncodingElement.cs" />
+    <Compile Include="PgadGatewayError.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="IPgadGateway.cs" />
+    <Compile Include="Model\PgadTransactionStoreException.cs" />
+    <Compile Include="PgadGateway.cs" />
+    <Compile Include="Profiles\ProfilePacg.cs" />
+    <Compile Include="Utility\Settings.cs" />
+    <Compile Include="CustomMessageEncoder\PgadTextMessageEncoder.cs" />
+    <Compile Include="Exceptions\PgadException.cs" />
+    <Compile Include="CustomMessageEncoder\PgadProxy.cs" />
+    <Compile Include="Model\PgadAdapter.cs" />
+    <Compile Include="Model\PgadAdapterException.cs" />
+    <Compile Include="Model\PgadTransactionStore.cs" />
+    <Compile Include="PgadGatewayTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\Pgad\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Service References\Pgad\ContiDiGioco1.wsdl" />
+    <None Include="Service References\Pgad\ContiDiGiocoXMLSchema1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.interrogazionePostaElettronicaContoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.interrogazioneProvinciaResidenzaContoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.interrogazionePseudonimoContoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.interrogazioneStoriaSoggettoAutoesclusoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="wsdl\Versione-2.2\ContiDiGiocoXMLSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="wsdl\Versione-2.2\PACG_2.2.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Pgad\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Pgad\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Pgad\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.aggiornaDatiDocumentoTitolareContoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.aggiornaDatiDocumentoTitolareContoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.aggiornaLimiteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.aggiornaLimiteResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.aggiornaPostaElettronicaContoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.aggiornaPseudonimoContoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.aperturaContoPersonaFisica2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.aperturaContoPersonaFisica2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.aperturaContoPersonaFisicaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.aperturaContoPersonaFisicaResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.aperturaContoPersonaGiuridicaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.aperturaContoPersonaGiuridicaResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.aperturaSemplificataContoPersonaFisica2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.aperturaSemplificataContoPersonaFisica2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.aperturaSemplificataContoPersonaFisicaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.aperturaSemplificataContoPersonaFisicaResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.cambioStatoContoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.cambioStatoContoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.contoDormienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.contoDormienteResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.elencoContiAutoesclusiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.elencoContiAutoesclusiResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.elencoContiDormientiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.elencoContiDormientiResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.elencoContiSenzaSubregistrazioneResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.elencoContiSenzaSubregistrazioneResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.gestioneAutoesclusioneTrasversaleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.gestioneAutoesclusioneTrasversaleResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.integrazioneAperturaSemplificataContoPersonaFisica2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.integrazioneAperturaSemplificataContoPersonaFisica2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.integrazioneAperturaSemplificataContoPersonaFisicaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.integrazioneAperturaSemplificataContoPersonaFisicaResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.interrogazioneEstremiDocumentoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.interrogazioneEstremiDocumentoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.interrogazioneLimitiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.interrogazioneLimitiResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.interrogazioneSoggettoAutoesclusoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.interrogazioneStatoContoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.interrogazioneStatoContoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.migrazioneContoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.migrazioneContoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.modificaProvinciaResidenzaContoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.modificaProvinciaResidenzaContoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.movimentazioneBonusContoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.movimentazioneBonusContoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.movimentazioneContoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.movimentazioneContoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.riepilogoOperazioniMovimentazioneResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.riepilogoOperazioniMovimentazioneResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.riepilogoOperazioniServizioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.riepilogoOperazioniServizioResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.saldoContoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.saldoContoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.stornoMovimentazioneContoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.stornoMovimentazioneContoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.subregistrazione2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.subregistrazione2Response1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.subregistrazioneResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\PgadCommunication.Pgad.subregistrazioneResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Pgad\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,6 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" 
+    Service="PGADServiceLibrary.PGADService, PGADServiceLibrary"
+Factory="Autofac.Integration.Wcf.AutofacServiceHostFactory, Autofac.Integration.Wcf" %>
+
+
+

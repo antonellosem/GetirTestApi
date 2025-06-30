@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<anag_conti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <id_fornitura>93</id_fornitura>
+  <num_record>1</num_record>
+  <conto>
+    <prog>113731</prog>
+    <nickname>pesista91</nickname>
+    <email>alexfilt@live.it</email>
+    <id_conto>4098-0083544</id_conto>
+    <data_attivazione>2010-09-05T11:51:00</data_attivazione>
+    <cod_rete>2</cod_rete>
+    <cod_conc>4098</cod_conc>
+    <soggetto>
+      <persona_fisica>
+        <id_soggetto>CLALSS91D08A662C</id_soggetto>
+        <nome>ALESSIO</nome>
+        <cognome>CALO'</cognome>
+        <sesso>M</sesso>
+        <data_nascita>1991-04-08</data_nascita>
+        <comune_nascita>BARI</comune_nascita>
+        <prov_nascita>BA</prov_nascita>
+        <prov_residenza>BA</prov_residenza>
+      </persona_fisica>
+    </soggetto>
+  </conto>
+</anag_conti>

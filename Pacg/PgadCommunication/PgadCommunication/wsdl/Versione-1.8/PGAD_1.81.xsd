@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="T7_whiteSpace">
+		<xs:attribute name="value" use="required" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="T7_length">
+		<xs:attribute name="value" use="required" type="xs:byte"/>
+	</xs:complexType>
+</xs:schema>

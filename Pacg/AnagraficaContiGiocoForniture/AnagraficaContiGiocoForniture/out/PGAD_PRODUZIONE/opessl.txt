@@ -1,0 +1,14 @@
+
+Esportare il certificato in formato p12
+
+--Esportazione 
+openssl pkcs12 -export -in certificato.crt -inkey chiaveprivata.pem -out file.p12  
+
+--Esportazione in pem
+openssl pkcs12 -in file.p12 -out file.pem
+
+Firma
+openssl smime -sign -in fornitura42.zip -outform DER -binary -nodetach -signer ilot.pem -passin pass:intralot -out fornitura42Firmata
+
+Cifratura
+openssl smime -encrypt -inkey aams_public_key.pem -in fornitura42Firmata -outform DER -des3 -binary -out fornitura42Pronta aams_certificate.cer

@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE errori [
+  <!ELEMENT errori (id_fornitura, data_invio, num_conti_ok, errore*)>
+  <!ELEMENT id_fornitura (#PCDATA)>
+  <!ELEMENT data_invio (#PCDATA)>
+  <!ELEMENT num_conti_ok (#PCDATA)>
+  <!ELEMENT errore (prog, code, descr?, type?, output?)>
+  <!ELEMENT prog (#PCDATA)>
+  <!ELEMENT code (#PCDATA)>
+  <!ELEMENT descr (#PCDATA)>
+  <!ELEMENT type (#PCDATA)>
+  <!ELEMENT output (#PCDATA)>
+]>
+<errori>
+  <id_fornitura>45</id_fornitura>
+  <data_invio>2011-07-13</data_invio>
+  <num_conti_ok>0</num_conti_ok>
+  <errore>
+    <prog>1185</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>1366</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>1444</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>2773</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>4816</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>5581</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>6647</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>7010</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>10603</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>10778</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>12272</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>12560</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>12638</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>12859</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>12909</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>13850</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>14397</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>14922</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>16356</prog>
+    <code>XX13</code>
+    <descr>DATI INCONGRUENTI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>17306</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>17495</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>17537</prog>
+    <code>XX10</code>
+    <descr>IL CODICE FISCALE INSERITO E' UN COLLEGATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>19034</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>19567</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>20953</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>20966</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>22016</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>27741</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>29078</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>32133</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>32657</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>32684</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>34783</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>35838</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>35904</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>36471</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>37488</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>38441</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>39038</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>39699</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>41455</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>41579</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>42680</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>43595</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>44121</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>44384</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>46949</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>47674</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>49742</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>53947</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>54696</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>56600</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>58771</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>59055</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>60733</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>61919</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>64362</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>68850</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>71132</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>74430</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>76216</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>77490</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>79715</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>80880</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>85519</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>89011</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>89200</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>92350</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>93132</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>93523</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>96759</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>97834</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>99358</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>100940</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>101019</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>103011</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>103768</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>104708</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>107292</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>108245</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>113402</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>113452</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>113521</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>114712</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>115266</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>115695</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>116208</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>116489</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>119338</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>119741</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>121210</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>123190</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>123791</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>126117</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>126428</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>126579</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>127295</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>129320</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>130424</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>130963</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>131236</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>133382</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>133696</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>136379</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>139892</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>143115</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>143654</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>147519</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>149212</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>150584</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>151204</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>152807</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>154010</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>154402</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>155319</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>155993</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>156040</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>157912</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>158120</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>158781</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>158848</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>159425</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>159542</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>161227</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>162319</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>162657</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>164057</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>167491</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>168205</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>168447</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>169312</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>169579</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>169841</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>170126</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>170472</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>170519</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>170941</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>171639</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>172447</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>172892</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>173145</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>173159</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>174039</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>174773</prog>
+    <code>1100</code>
+    <descr>CONCESSIONARIO TRASMITTENTE NON IDENTIFICATO</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>175055</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+  <errore>
+    <prog>175067</prog>
+    <code>XX01</code>
+    <descr>NON TROVATO ALCUN SOGGETTO CORRISPONDENTE AI DATI</descr>
+    <type>ERROR</type>
+    
+  </errore>
+</errori>

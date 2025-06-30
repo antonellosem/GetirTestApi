@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<anag_conti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <id_fornitura>90</id_fornitura>
+  <num_record>2</num_record>
+  <conto>
+    <prog>94647</prog>
+    <nickname>kaimano94</nickname>
+    <email>mimi.martina@aliceposta.it</email>
+    <id_conto>4098-0071038</id_conto>
+    <data_attivazione>2010-03-30T10:59:00</data_attivazione>
+    <cod_rete>2</cod_rete>
+    <cod_conc>4098</cod_conc>
+    <soggetto>
+      <persona_fisica>
+        <id_soggetto>DLLPMR64B15G388P</id_soggetto>
+        <nome>PAOLO MARIA DAVIDE</nome>
+        <cognome>DELL'ACQUA</cognome>
+        <sesso>M</sesso>
+        <data_nascita>1964-02-15</data_nascita>
+        <comune_nascita>PAVIA</comune_nascita>
+        <prov_nascita>PV</prov_nascita>
+        <prov_residenza>PV</prov_residenza>
+      </persona_fisica>
+    </soggetto>
+  </conto>
+  <conto>
+    <prog>150164</prog>
+    <nickname>russomorra</nickname>
+    <email>antoniofrancesco20@live.it</email>
+    <id_conto>4098-0113824</id_conto>
+    <data_attivazione>2011-01-29T23:00:00</data_attivazione>
+    <cod_rete>2</cod_rete>
+    <cod_conc>4098</cod_conc>
+    <soggetto>
+      <persona_fisica>
+        <id_soggetto>RSSNTN85L13F8P9S</id_soggetto>
+        <nome>ANTONIO</nome>
+        <cognome>RUSSO</cognome>
+        <sesso>M</sesso>
+        <data_nascita>1985-07-13</data_nascita>
+        <comune_nascita>NAPOLI</comune_nascita>
+        <prov_nascita>NA</prov_nascita>
+        <prov_residenza>NA</prov_residenza>
+      </persona_fisica>
+    </soggetto>
+  </conto>
+</anag_conti>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ba7ed670-26b6-46ce-a90c-80c99dc1b318" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:55984/PGADService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PGADService.xsd" MetadataType="Schema" ID="ba2ca756-a646-4d56-af63-d6c037c089e0" SourceId="1" SourceUrl="http://localhost:55984/PGADService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PGADService.wsdl" MetadataType="Wsdl" ID="46454c70-0fd7-4703-8ed9-4e9386c398c9" SourceId="1" SourceUrl="http://localhost:55984/PGADService.svc?wsdl" />
+    <MetadataFile FileName="PGADService1.xsd" MetadataType="Schema" ID="7e72cd3f-f7ee-4b39-8306-9ab17596781f" SourceId="1" SourceUrl="http://localhost:55984/PGADService.svc?xsd=xsd5" />
+    <MetadataFile FileName="PGADService2.xsd" MetadataType="Schema" ID="eba264de-019d-447d-bad4-c0953d5aee16" SourceId="1" SourceUrl="http://localhost:55984/PGADService.svc?xsd=xsd4" />
+    <MetadataFile FileName="PGADService3.xsd" MetadataType="Schema" ID="42427207-2cd0-44d1-a789-2a18cc93f5e9" SourceId="1" SourceUrl="http://localhost:55984/PGADService.svc?xsd=xsd3" />
+    <MetadataFile FileName="PGADService.disco" MetadataType="Disco" ID="52f6b1bb-8ba7-415e-baa0-240e5bee180e" SourceId="1" SourceUrl="http://localhost:55984/PGADService.svc?disco" />
+    <MetadataFile FileName="PGADService4.xsd" MetadataType="Schema" ID="9265a4b4-f463-44eb-bcfe-8019433dae7d" SourceId="1" SourceUrl="http://localhost:55984/PGADService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PGADService5.xsd" MetadataType="Schema" ID="334d87f6-18a4-414b-9839-3d04fc6aa66a" SourceId="1" SourceUrl="http://localhost:55984/PGADService.svc?xsd=xsd6" />
+    <MetadataFile FileName="PGADService6.xsd" MetadataType="Schema" ID="220f13e2-82fe-4ff2-bfd1-f0170e19fecb" SourceId="1" SourceUrl="http://localhost:55984/PGADService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,2 @@
+public --> CifraSistemaCentrale (seriale 224a552c6ad6d0d8)
+private--> firma.pfx (b695fd87552b6ca9f3301a2dca757615e8b0266b)

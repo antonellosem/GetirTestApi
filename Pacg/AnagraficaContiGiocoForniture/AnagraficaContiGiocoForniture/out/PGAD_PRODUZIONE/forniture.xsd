@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xsd:annotation>
+		<xsd:documentation xml:lang="it"> 
+      Schema per la comunicazione di forniture delle anagrafiche dei conti di gioco
+     </xsd:documentation>
+	</xsd:annotation>
+	<!-- Composizione fornitura per la comunicazione dell'anag -->
+	<xsd:element name="anag_conti">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="id_fornitura"/>
+				<xsd:element ref="num_record"/>
+				<xsd:element ref="conto" maxOccurs="10000"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- Composizione della fornitura per la chiusura dei conti -->
+	<xsd:element name="chiudi_conti">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="id_fornitura"/>
+				<xsd:element ref="num_record"/>
+				<xsd:element ref="conto_chiuso" maxOccurs="10000"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- Composizione fornitura per modifica residenza -->
+	<xsd:element name="mod_residenza">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="id_fornitura"/>
+				<xsd:element ref="num_record"/>
+				<xsd:element ref="conto_mod" maxOccurs="10000"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- Specifica composizione di un conto (record) -->
+	<xsd:element name="conto">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="prog"/>
+				<xsd:element ref="nickname"/>
+				<xsd:element ref="email"/>
+				<xsd:element ref="id_conto"/>
+				<xsd:element ref="data_attivazione"/>
+				<xsd:element ref="cod_rete"/>
+				<xsd:element ref="cod_conc"/>
+				<xsd:element ref="soggetto"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- Spec composizione persona fisica -->
+	<xsd:element name="persona_fisica">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="id_soggetto"/>
+				<xsd:element ref="nome"/>
+				<xsd:element ref="cognome"/>
+				<xsd:element ref="sesso"/>
+				<xsd:element ref="data_nascita"/>
+				<xsd:element ref="comune_nascita"/>
+				<xsd:element ref="prov_nascita"/>
+				<xsd:element ref="prov_residenza"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- Spec composizione persona giuridica (per la comunicazione dei conti di gioco del concessionario -->
+	<xsd:element name="persona_giuridica">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="id_soggetto"/>
+				<xsd:element ref="ragione_sociale"/>
+				<xsd:element ref="comune_sede"/>
+				<xsd:element ref="prov_sede"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- Specifica composizione di conto_chiuso -->
+	<xsd:element name="conto_chiuso">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="prog"/>
+				<xsd:element ref="id_conto"/>
+				<xsd:element ref="cod_rete"/>
+				<xsd:element ref="cod_conc"/>
+				<xsd:element ref="causale"/>
+				<xsd:element ref="data_cessazione"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- Specifica composizione di conto_mod -->
+	<xsd:element name="conto_mod">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="prog"/>
+				<xsd:element ref="id_conto"/>
+				<xsd:element ref="cod_rete"/>
+				<xsd:element ref="cod_conc"/>
+				<xsd:element ref="prov_residenza"/>
+				<xsd:element ref="data_movimento"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- Elementi -->
+	<xsd:element name="id_fornitura" type="xsd:integer"/>
+	<!-- identificativo libero per la fornitura; max 20 -->
+	<xsd:element name="num_record" type="xsd:integer"/>
+	<!-- limite di 10000 da ridurre a 1000 per forniture non compresse -->
+	<xsd:element name="prog" type="xsd:integer"/>
+	<!-- deve essere un Int, libero, ma univoco all'interno della fornitura (permette di identificare gli errori) -->
+	<!-- rete di cui fa parte il codice concessione; Attenzione: può variare nel tempo -->
+	<xsd:element name="cod_rete">
+		<xsd:annotation>
+			<xsd:documentation>
+			  2:  GIOCHI PUBBLICI SPORT
+			  3:  GIOCHI PUBBLICI IPPICA
+			  7:  RINNOVATO SCOMMESSE IPPICHE
+			  8:  RINNOVATO SCOMMESSE SPORTIVE
+			  12: SUPERENALOTTO
+			  13: BINGO
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="2"/>
+				<xsd:enumeration value="2"/>
+				<xsd:enumeration value="3"/>
+				<xsd:enumeration value="7"/>
+				<xsd:enumeration value="8"/>
+				<xsd:enumeration value="12"/>
+				<xsd:enumeration value="13"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- Codice concessionario (ogni record può avere diverse concessioni, ma devono essere tutte della stessa p.iva -->
+	<xsd:element name="cod_conc">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="1"/>
+				<xsd:maxLength value="10"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- identificativo del conto -->
+	<xsd:element name="id_conto">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="1"/>
+				<xsd:maxLength value="20"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- Username per l'accesso al conto (opzionale) -->
+	<xsd:element name="nickname" nillable="true">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="0"/>
+				<xsd:maxLength value="100"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- e-mail di riferimento del conto (opzionale) -->
+	<xsd:element name="email" nillable="true">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="0"/>
+				<xsd:maxLength value="100"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- Soggetto intestatario del conto di gioco -->
+	<xsd:element name="soggetto">
+		<xsd:complexType>
+			<xsd:choice>
+				<xsd:element ref="persona_fisica"/>
+				<xsd:element ref="persona_giuridica"/>
+			</xsd:choice>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="nome">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="2"/>
+				<xsd:maxLength value="100"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="cognome">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="2"/>
+				<xsd:maxLength value="100"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="ragione_sociale">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="2"/>
+				<xsd:maxLength value="100"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="sesso">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:length value="1"/>
+				<xsd:enumeration value="M"/>
+				<xsd:enumeration value="F"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<!-- codice fiscale per persona fisica, p.iva per persona giuridica -->
+	<xsd:element name="id_soggetto">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="11"/>
+				<xsd:maxLength value="16"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="data_nascita" type="xsd:date"/>
+	<xsd:element name="comune_nascita">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="2"/>
+				<xsd:maxLength value="100"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="comune_sede">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="2"/>
+				<xsd:maxLength value="100"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="prov_nascita">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:length value="2"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="prov_sede">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:length value="2"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="prov_residenza">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:length value="2"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="data_attivazione" type="xsd:dateTime"/>
+	<!-- causale di chiusura -->
+	<xsd:element name="causale">
+		<xsd:annotation>
+			<xsd:documentation>
+			  1: CAMBIO STATO RICHIESTO DA AAMS (non richiamabile da xml) -> genera un errore
+			  2: CAMBIO STATO RICHIESTO DAL CONCESSIONARIO
+			  3: CAMBIO STATO RICHIESTO DAL TITOLARE DEL CONTO DI GIOCO
+			  4: CAMBIO STATO RICHIESTO DALL'AUTORITA' GIUDIZIARIA
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:length value="1"/>
+				<!-- <xsd:enumeration value="1"/> -->
+				<xsd:enumeration value="2"/>
+				<xsd:enumeration value="3"/>
+				<xsd:enumeration value="4"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="data_cessazione" type="xsd:dateTime"/>
+	<xsd:element name="data_movimento" type="xsd:dateTime"/>
+</xsd:schema>

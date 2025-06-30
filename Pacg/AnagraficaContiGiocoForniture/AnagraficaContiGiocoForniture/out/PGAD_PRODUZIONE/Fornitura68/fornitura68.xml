@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<anag_conti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <id_fornitura>68</id_fornitura>
+  <num_record>1</num_record>
+  <conto>
+    <prog>154903</prog>
+    <nickname>piaggio47</nickname>
+    <email>piaggio47@tiscali.it</email>
+    <id_conto>4098-0118326</id_conto>
+    <data_attivazione>2011-02-15T13:05:00</data_attivazione>
+    <cod_rete>2</cod_rete>
+    <cod_conc>4098</cod_conc>
+    <soggetto>
+      <persona_fisica>
+        <id_soggetto>VRGPGR47C24F501J</id_soggetto>
+        <nome>PIERGIORGIO</nome>
+        <cognome>VIRGILI</cognome>
+        <sesso>M</sesso>
+        <data_nascita>1947-03-24</data_nascita>
+        <comune_nascita>MONTEFIORE DELL'ASO</comune_nascita>
+        <prov_nascita>AP</prov_nascita>
+        <prov_residenza>AP</prov_residenza>
+      </persona_fisica>
+    </soggetto>
+  </conto>
+</anag_conti>

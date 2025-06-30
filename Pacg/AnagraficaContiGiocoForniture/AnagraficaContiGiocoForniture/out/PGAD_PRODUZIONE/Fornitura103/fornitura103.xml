@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<anag_conti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <id_fornitura>103</id_fornitura>
+  <num_record>1</num_record>
+  <conto>
+    <prog>139443</prog>
+    <nickname>zandonamichael</nickname>
+    <email>zandonamichael@libero.it</email>
+    <id_conto>4098-0103767</id_conto>
+    <data_attivazione>2010-12-13T19:16:00</data_attivazione>
+    <cod_rete>2</cod_rete>
+    <cod_conc>4098</cod_conc>
+    <soggetto>
+      <persona_fisica>
+        <id_soggetto>ZNDMHL88D06L781M</id_soggetto>
+        <nome>MICHAEL</nome>
+        <cognome>ZANDONA'</cognome>
+        <sesso>M</sesso>
+        <data_nascita>1988-04-06</data_nascita>
+        <comune_nascita>VERONA</comune_nascita>
+        <prov_nascita>VR</prov_nascita>
+        <prov_residenza>VR</prov_residenza>
+      </persona_fisica>
+    </soggetto>
+  </conto>
+</anag_conti>

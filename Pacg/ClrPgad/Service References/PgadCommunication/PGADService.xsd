@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/PgadCommunication.Business" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:55984/PGADService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:55984/PGADService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/PgadCommunication.Pgad" />
+  <xs:complexType name="PgadGatewayResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_descrizione" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_esito" type="xs:short" />
+      <xs:element minOccurs="0" name="_idRicevuta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_idTransazione" type="xs:long" />
+      <xs:element minOccurs="0" name="_success" type="xs:boolean" />
+      <xs:element minOccurs="0" name="_timestamp" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PgadGatewayResponse" nillable="true" type="tns:PgadGatewayResponse" />
+  <xs:complexType name="PgadGatewayGenericError">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PgadGatewayResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PgadGatewayGenericError" nillable="true" type="tns:PgadGatewayGenericError" />
+  <xs:complexType name="PgadGatewayStatoResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PgadGatewayResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Causale" type="xs:int" />
+          <xs:element minOccurs="0" name="CodiceConto" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IdCnConto" type="xs:long" />
+          <xs:element minOccurs="0" name="IdReteConto" type="xs:int" />
+          <xs:element minOccurs="0" name="Stato" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PgadGatewayStatoResponse" nillable="true" type="tns:PgadGatewayStatoResponse" />
+  <xs:complexType name="PgadGatewayStatoGenericError">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PgadGatewayStatoResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PgadGatewayStatoGenericError" nillable="true" type="tns:PgadGatewayStatoGenericError" />
+  <xs:simpleType name="CAUSALE_CAMBIO_STATO_CONTO">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RICHIESTO_DA_AAMS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RICHIESTO_DAL_CONCESSIONARIO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RICHIESTO_DAL_TITOLARE_CONTO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RICHIESTO_DA_AUTORITA_GIUDIZIARIA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RICHIESTO_DA_AAMS_DECESSO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RICHIESTO_DAL_CONCESSIONARIO_PER_MANCATO_INVIO_DOC">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RICHIESTO_DAL_CONCESSIONARIO_PER_FRODE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CAUSALE_CAMBIO_STATO_CONTO" nillable="true" type="tns:CAUSALE_CAMBIO_STATO_CONTO" />
+  <xs:simpleType name="STATO_CONTO">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="APERTO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SOSPESO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CHIUSO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DORMIENTE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="STATO_CONTO" nillable="true" type="tns:STATO_CONTO" />
+  <xs:complexType name="ArrayOfBonus">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Bonus" nillable="true" type="tns:Bonus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBonus" nillable="true" type="tns:ArrayOfBonus" />
+  <xs:complexType name="Bonus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodiceFamiglia" type="xs:int" />
+      <xs:element minOccurs="0" name="Importo" type="xs:int" />
+      <xs:element minOccurs="0" name="TipoGioco" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Bonus" nillable="true" type="tns:Bonus" />
+  <xs:simpleType name="CAUSALE_MOVIMENTO">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RICARICA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="STORNO_RICARICA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PRELIEVO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="STORNO_PRELIEVO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="COSTI_SERVIZI_AGGIUNTIVI">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="STORNO_COSTI_SERVIZI_AGGIUNTIVI">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CAUSALE_MOVIMENTO" nillable="true" type="tns:CAUSALE_MOVIMENTO" />
+  <xs:simpleType name="MEZZO_PAGAMENTO">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CONTANTI">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CARTA_CREDITO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CARTA_PREPAGATA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BONIFICO_BANCARIO_POSTALE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="BOLLETTINO_POSTALE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ASSEGNO_CONTO_CORRENTE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ASSEGNO_CIRCOLARE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VAGLIA_POSTALE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RICARICA_SCRATCH">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ALTRO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="IMEL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CONTO_DI_GIOCO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CONVERSIONE_BONUS">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="E_WALLET">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MEZZO_PAGAMENTO" nillable="true" type="tns:MEZZO_PAGAMENTO" />
+  <xs:simpleType name="TIPO_STORNO">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NORMALE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CHARGE_BACK">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TIPO_STORNO" nillable="true" type="tns:TIPO_STORNO" />
+  <xs:complexType name="PgdaGatewayRiepilogoOperazioniMovimentazioneResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PgadGatewayResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Data" type="xs:dateTime" />
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/PgadCommunication.Pgad" minOccurs="0" name="Operazioni" nillable="true" type="q1:ArrayOfDettaglioOperazioniMovimentazione" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PgdaGatewayRiepilogoOperazioniMovimentazioneResponse" nillable="true" type="tns:PgdaGatewayRiepilogoOperazioniMovimentazioneResponse" />
+  <xs:complexType name="PgdaGatewayRiepilogoOperazioniMovimentazioneGenericError">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PgdaGatewayRiepilogoOperazioniMovimentazioneResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PgdaGatewayRiepilogoOperazioniMovimentazioneGenericError" nillable="true" type="tns:PgdaGatewayRiepilogoOperazioniMovimentazioneGenericError" />
+  <xs:complexType name="PgdaGatewayRiepilogoOperazioniServizioResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PgadGatewayResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Data" type="xs:dateTime" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/PgadCommunication.Pgad" minOccurs="0" name="Operazioni" nillable="true" type="q2:ArrayOfDettaglioOperazioniServizio" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PgdaGatewayRiepilogoOperazioniServizioResponse" nillable="true" type="tns:PgdaGatewayRiepilogoOperazioniServizioResponse" />
+  <xs:complexType name="PgdaGatewayRiepilogoOperazioniServizioGenericError">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PgdaGatewayRiepilogoOperazioniServizioResponse">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PgdaGatewayRiepilogoOperazioniServizioGenericError" nillable="true" type="tns:PgdaGatewayRiepilogoOperazioniServizioGenericError" />
+</xs:schema>

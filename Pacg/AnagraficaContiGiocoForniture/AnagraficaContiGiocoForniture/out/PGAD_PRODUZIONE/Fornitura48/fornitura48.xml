@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<anag_conti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <id_fornitura>48</id_fornitura>
+  <num_record>2</num_record>
+  <conto>
+    <prog>72704</prog>
+    <nickname>sinsity66</nickname>
+    <email>nando68_1968@libero.it</email>
+    <id_conto>4098-0059509</id_conto>
+    <data_attivazione>2010-01-01T19:01:00</data_attivazione>
+    <cod_rete>2</cod_rete>
+    <cod_conc>4098</cod_conc>
+    <soggetto>
+      <persona_fisica>
+        <id_soggetto>NTLBNR68P10L844W</id_soggetto>
+        <nome>BERNARDO</nome>
+        <cognome>NATALE</cognome>
+        <sesso>M</sesso>
+        <data_nascita>1968-09-10</data_nascita>
+        <comune_nascita>VILLA LITERNO</comune_nascita>
+        <prov_nascita>CE</prov_nascita>
+        <prov_residenza>CE</prov_residenza>
+      </persona_fisica>
+    </soggetto>
+  </conto>
+  <conto>
+    <prog>113450</prog>
+    <nickname>losardo</nickname>
+    <email>annamarialosardo@libero.it</email>
+    <id_conto>4098-0083309</id_conto>
+    <data_attivazione>2010-09-03T17:55:00</data_attivazione>
+    <cod_rete>2</cod_rete>
+    <cod_conc>4098</cod_conc>
+    <soggetto>
+      <persona_fisica>
+        <id_soggetto>LSRNMR86C48C588R</id_soggetto>
+        <nome>ANNA MARIA</nome>
+        <cognome>LOSARDO</cognome>
+        <sesso>F</sesso>
+        <data_nascita>1986-03-08</data_nascita>
+        <comune_nascita>CETRARO</comune_nascita>
+        <prov_nascita>CS</prov_nascita>
+        <prov_residenza>CS</prov_residenza>
+      </persona_fisica>
+    </soggetto>
+  </conto>
+</anag_conti>

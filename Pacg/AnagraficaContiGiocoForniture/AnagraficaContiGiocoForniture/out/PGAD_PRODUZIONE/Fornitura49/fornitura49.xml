@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<anag_conti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <id_fornitura>49</id_fornitura>
+  <num_record>1</num_record>
+  <conto>
+    <prog>72704</prog>
+    <nickname>sinsity66</nickname>
+    <email>nando68_1968@libero.it</email>
+    <id_conto>4098-0059509</id_conto>
+    <data_attivazione>2010-01-01T19:01:00</data_attivazione>
+    <cod_rete>2</cod_rete>
+    <cod_conc>4098</cod_conc>
+    <soggetto>
+      <persona_fisica>
+        <id_soggetto>NTLBNR68P05L844H</id_soggetto>
+        <nome>BERNARDO</nome>
+        <cognome>NATALE</cognome>
+        <sesso>M</sesso>
+        <data_nascita>1968-09-05</data_nascita>
+        <comune_nascita>VILLA LITERNO</comune_nascita>
+        <prov_nascita>CE</prov_nascita>
+        <prov_residenza>CE</prov_residenza>
+      </persona_fisica>
+    </soggetto>
+  </conto>
+</anag_conti>

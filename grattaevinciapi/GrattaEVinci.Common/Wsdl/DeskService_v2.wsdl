@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="http://ws.lottomatica.rivenditore.it" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://ws.lottomatica.rivenditore.it/types" name="DeskService_v2" targetNamespace="http://ws.lottomatica.rivenditore.it" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema xmlns:soap11-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://ws.lottomatica.rivenditore.it/types" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ws.lottomatica.rivenditore.it/types">
+      <xsd:complexType name="AddebitoResponse">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns:SaldoContoGiocoResponse">
+            <xsd:sequence>
+              <xsd:element name="datiFirmati" nillable="true" type="xsd:string" />
+              <xsd:element name="firma" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ResponseData">
+        <xsd:sequence>
+          <xsd:element name="codiceRisultato" nillable="true" type="xsd:string" />
+          <xsd:element name="descrizioneRisultato" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SaldoContoGiocoResponse">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns:ResponseData">
+            <xsd:sequence>
+              <xsd:element name="saldoContoGioco" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ChiaveContoGiocoResponse">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns:ResponseData">
+            <xsd:sequence>
+              <xsd:element name="chiaveContoGioco" nillable="true" type="xsd:string" />
+              <xsd:element name="datiFirmati" nillable="true" type="xsd:string" />
+              <xsd:element name="firma" nillable="true" type="xsd:string" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+  <message name="Desk_checkToken">
+    <part name="String_1" type="xsd:string" />
+    <part name="String_2" type="xsd:string" />
+    <part name="String_3" type="xsd:string" />
+  </message>
+  <message name="Desk_checkTokenResponse">
+    <part name="result" type="ns1:SaldoContoGiocoResponse" />
+  </message>
+  <message name="Desk_commitAddebito">
+    <part name="String_1" type="xsd:string" />
+    <part name="String_2" type="xsd:string" />
+    <part name="String_3" type="xsd:string" />
+    <part name="String_4" type="xsd:string" />
+    <part name="String_5" type="xsd:string" />
+    <part name="String_6" type="xsd:string" />
+    <part name="String_7" type="xsd:string" />
+    <part name="String_8" type="xsd:string" />
+    <part name="String_9" type="xsd:string" />
+    <part name="String_10" type="xsd:string" />
+    <part name="String_11" type="xsd:string" />
+    <part name="String_12" type="xsd:string" />
+    <part name="String_13" type="xsd:string" />
+  </message>
+  <message name="Desk_commitAddebitoResponse">
+    <part name="result" type="ns1:AddebitoResponse" />
+  </message>
+  <message name="Desk_reserveAddebito">
+    <part name="String_1" type="xsd:string" />
+    <part name="String_2" type="xsd:string" />
+    <part name="String_3" type="xsd:string" />
+    <part name="String_4" type="xsd:string" />
+    <part name="String_5" type="xsd:string" />
+    <part name="String_6" type="xsd:string" />
+    <part name="String_7" type="xsd:string" />
+    <part name="String_8" type="xsd:string" />
+    <part name="String_9" type="xsd:string" />
+    <part name="String_10" type="xsd:string" />
+  </message>
+  <message name="Desk_reserveAddebitoResponse">
+    <part name="result" type="ns1:AddebitoResponse" />
+  </message>
+  <message name="Desk_rollbackAddebito">
+    <part name="String_1" type="xsd:string" />
+    <part name="String_2" type="xsd:string" />
+    <part name="String_3" type="xsd:string" />
+    <part name="String_4" type="xsd:string" />
+    <part name="String_5" type="xsd:string" />
+    <part name="String_6" type="xsd:string" />
+    <part name="String_7" type="xsd:string" />
+    <part name="String_8" type="xsd:string" />
+    <part name="String_9" type="xsd:string" />
+    <part name="String_10" type="xsd:string" />
+  </message>
+  <message name="Desk_rollbackAddebitoResponse">
+    <part name="result" type="ns1:AddebitoResponse" />
+  </message>
+  <message name="Desk_saldoContoGioco">
+    <part name="String_1" type="xsd:string" />
+    <part name="String_2" type="xsd:string" />
+    <part name="String_3" type="xsd:string" />
+  </message>
+  <message name="Desk_saldoContoGiocoResponse">
+    <part name="result" type="ns1:SaldoContoGiocoResponse" />
+  </message>
+  <message name="Desk_chiaveContoGioco">
+    <part name="String_1" type="xsd:string" />
+    <part name="String_2" type="xsd:string" />
+    <part name="String_3" type="xsd:string" />
+    <part name="String_4" type="xsd:string" />
+  </message>
+  <message name="Desk_chiaveContoGiocoResponse">
+    <part name="result" type="ns1:ChiaveContoGiocoResponse" />
+  </message>
+  <portType name="Desk_v2">
+    <operation name="checkToken" parameterOrder="String_1 String_2 String_3">
+      <input message="tns:Desk_checkToken" />
+      <output message="tns:Desk_checkTokenResponse" />
+    </operation>
+    <operation name="commitAddebito" parameterOrder="String_1 String_2 String_3 String_4 String_5 String_6 String_7 String_8 String_9 String_10 String_11 String_12 String_13">
+      <input message="tns:Desk_commitAddebito" />
+      <output message="tns:Desk_commitAddebitoResponse" />
+    </operation>
+    <operation name="reserveAddebito" parameterOrder="String_1 String_2 String_3 String_4 String_5 String_6 String_7 String_8 String_9">
+      <input message="tns:Desk_reserveAddebito" />
+      <output message="tns:Desk_reserveAddebitoResponse" />
+    </operation>
+    <operation name="rollbackAddebito" parameterOrder="String_1 String_2 String_3 String_4 String_5 String_6 String_7 String_8 String_9">
+      <input message="tns:Desk_rollbackAddebito" />
+      <output message="tns:Desk_rollbackAddebitoResponse" />
+    </operation>
+    <operation name="saldoContoGioco" parameterOrder="String_1 String_2 String_3">
+      <input message="tns:Desk_saldoContoGioco" />
+      <output message="tns:Desk_saldoContoGiocoResponse" />
+    </operation>
+    <operation name="chiaveContoGioco" parameterOrder="String_1 String_2 String_3 String_4">
+      <input message="tns:Desk_chiaveContoGioco" />
+      <output message="tns:Desk_chiaveContoGiocoResponse" />
+    </operation>
+  </portType>
+  <binding name="Desk_v2" type="tns:Desk_v2">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <operation name="checkToken">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ws.lottomatica.rivenditore.it" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ws.lottomatica.rivenditore.it" />
+      </output>
+    </operation>
+    <operation name="commitAddebito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ws.lottomatica.rivenditore.it" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ws.lottomatica.rivenditore.it" />
+      </output>
+    </operation>
+    <operation name="reserveAddebito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ws.lottomatica.rivenditore.it" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ws.lottomatica.rivenditore.it" />
+      </output>
+    </operation>
+    <operation name="rollbackAddebito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ws.lottomatica.rivenditore.it" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ws.lottomatica.rivenditore.it" />
+      </output>
+    </operation>
+    <operation name="saldoContoGioco">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ws.lottomatica.rivenditore.it" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ws.lottomatica.rivenditore.it" />
+      </output>
+    </operation>
+    <operation name="chiaveContoGioco">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" namespace="http://ws.lottomatica.rivenditore.it" />
+      </input>
+      <output>
+        <soap:body use="literal" namespace="http://ws.lottomatica.rivenditore.it" />
+      </output>
+    </operation>
+  </binding>
+  <service name="DeskService_v2">
+    <port name="DeskPort_v2" binding="tns:Desk_v2">
+      <soap:address location="https://localhost/" />
+    </port>
+  </service>
+</definitions>

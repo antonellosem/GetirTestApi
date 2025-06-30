@@ -1,0 +1,11 @@
+Passphrase = Yh74kO02*M
+Country name = Malta
+State or Province = Malta
+Locality Name = TA XBIEX
+Organization name = BML Group Limited
+Organizatione unit name = BML Group Limited
+Common Name = 94023840120
+email = noc@betssongroup.com
+
+Challege Password = Gn778KLp0C2
+optional company name = BML Group Limited

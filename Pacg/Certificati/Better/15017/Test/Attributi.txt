@@ -1,0 +1,11 @@
+passphrase: GBO2022!
+Country name = IT
+State or Province = Italy
+Locality Name = Rome
+Organization name = GBO Italy S.p.a
+Organizatione unit name = GBO Italy S.p.a.
+Common Name = 09257071002-01
+email = OnlinePlatform&Integration@gamenetgroup.it
+
+Challege Password = GBO2022!
+optional company name = GBO Italy S.p.a

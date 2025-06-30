@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://backend.sviluppo.intralot.it/PgadService/PGADService.svc?xsd=xsd1" filename="PGADService.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://backend.sviluppo.intralot.it/PgadService/PGADService.svc?disco" filename="PGADService.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://backend.sviluppo.intralot.it/PgadService/PGADService.svc?xsd=xsd6" filename="PGADService0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://backend.sviluppo.intralot.it/PgadService/PGADService.svc?xsd=xsd2" filename="PGADService1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://backend.sviluppo.intralot.it/PgadService/PGADService.svc?xsd=xsd0" filename="PGADService2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://backend.sviluppo.intralot.it/PgadService/PGADService.svc?xsd=xsd4" filename="PGADService3.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://backend.sviluppo.intralot.it/PgadService/PGADService.svc?xsd=xsd5" filename="PGADService4.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://backend.sviluppo.intralot.it/PgadService/PGADService.svc?wsdl" filename="PGADService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://backend.sviluppo.intralot.it/PgadService/PGADService.svc?xsd=xsd3" filename="PGADService5.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

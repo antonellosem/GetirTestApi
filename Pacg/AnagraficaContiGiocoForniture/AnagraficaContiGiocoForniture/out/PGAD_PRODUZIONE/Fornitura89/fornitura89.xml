@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<anag_conti xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <id_fornitura>89</id_fornitura>
+  <num_record>1</num_record>
+  <conto>
+    <prog>78312</prog>
+    <nickname>inter96</nickname>
+    <email>c.dimaio96@gmail.com</email>
+    <id_conto>4098-0062324</id_conto>
+    <data_attivazione>2010-01-21T18:22:00</data_attivazione>
+    <cod_rete>2</cod_rete>
+    <cod_conc>4098</cod_conc>
+    <soggetto>
+      <persona_fisica>
+        <id_soggetto>DMICLD92A11H501O</id_soggetto>
+        <nome>CLAUDIO</nome>
+        <cognome>DI MAIO</cognome>
+        <sesso>M</sesso>
+        <data_nascita>1992-01-11</data_nascita>
+        <comune_nascita>ROMA</comune_nascita>
+        <prov_nascita>RM</prov_nascita>
+        <prov_residenza>RM</prov_residenza>
+      </persona_fisica>
+    </soggetto>
+  </conto>
+</anag_conti>
