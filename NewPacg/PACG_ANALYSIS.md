@@ -1,62 +1,62 @@
-# Pacg Refactoring Analysis
+# Analisi della Rifattorizzazione di Pacg
 
-This page collects detailed notes about the legacy **Pacg** solution while we refactor it into the new `NewPacg` code base. The document acts as a hub to the rest of the analysis. See the [root overview](../PACG_ANALYSIS.md) for a high-level summary.
+In questa pagina raccolgo le note più approfondite sul vecchio progetto **Pacg** mentre lo porto all'interno della nuova code base `NewPacg`. Il documento è il punto di partenza per tutto il resto dell'analisi. Per una panoramica ad alto livello faccio riferimento alla [pagina principale](../PACG_ANALYSIS.md).
 
-## Project Structure in `Pacg`
+## Struttura dei progetti in `Pacg`
 
-* **PgadCommunication** - gateway library with request/response DTOs and custom message encoders.
-* **PGADService** - ASP.NET application hosting SOAP endpoints and using Autofac for dependency injection.
-* **PgadCommon** - shared enumerations and constants.
-* **PgadData** - data access objects and connection helpers.
-* **PgadManager** - initial business layer with stub methods.
-* **PGADServiceLibrary** - utility classes used by the service host.
-* **ClrPgad / ClrPGAD_sql2012** - SQL CLR projects.
-* **Lib** - third‑party libraries and old packages.config references.
-* **Docs** - architecture documents from the original development team.
+* **PgadCommunication** – libreria gateway con DTO di richiesta/risposta e encoder personalizzati.
+* **PGADService** – applicazione ASP.NET che ospita endpoint SOAP e utilizza Autofac per l'iniezione delle dipendenze.
+* **PgadCommon** – insieme di enumerazioni e costanti condivise.
+* **PgadData** – oggetti di accesso ai dati e helper per la connessione.
+* **PgadManager** – primo layer di business con metodi ancora in parte abbozzati.
+* **PGADServiceLibrary** – classi di utilità usate dall'host del servizio.
+* **ClrPgad / ClrPGAD_sql2012** – progetti SQL CLR.
+* **Lib** – librerie di terze parti e vecchie dipendenze packages.config.
+* **Docs** – documenti di architettura rilasciati dal team originario.
 
-All projects target **.NET Framework 4.7.2** and rely heavily on WCF and packages.config packages. The build process uses *.csproj* files with legacy references.
+Tutti i progetti sono compilati per **.NET Framework 4.7.2** e fanno ampio uso di WCF. Il processo di build si basa su file *.csproj* in stile classico con riferimenti storici.
 
-## Key Modules
+## Moduli principali
 
 ### PgadCommunication
-- `Business` folder exposes domain concepts such as `Bonus`.
-- `Configuration` manages service endpoints and X509 certificates.
-- `Contracts` contains hundreds of DTO classes under `Requests` and `Responses`.
-- `CustomMessageEncoder` implements SOAP message encoders for AAMS protocols.
-- `Factory.cs` builds gateway instances based on configuration.
+- La cartella `Business` espone i concetti di dominio, ad esempio `Bonus`.
+- In `Configuration` gestisco gli endpoint di servizio e i certificati X509.
+- Il sottoalbero `Contracts` contiene centinaia di classi DTO sotto `Requests` e `Responses`.
+- `CustomMessageEncoder` implementa encoder SOAP specifici per i protocolli AAMS.
+- In `Factory.cs` creo le istanze del gateway in base alla configurazione.
 
 ### PGADService
-- WCF service host (`PGADService.svc` and `.json.svc`).
-- Global.asax configures dependency injection and service routes.
-- Autofac modules register `PgadManager` and data layer services.
+- Rappresenta l'host WCF (`PGADService.svc` e `.json.svc`).
+- In `Global.asax` configuro l'iniezione delle dipendenze e le route dei servizi.
+- I moduli Autofac registrano `PgadManager` e i servizi del livello dati.
 
 ### PgadData
-- Data access layer with DAO classes such as `PacgProtocolloDao` and `TransazioniDao`.
-- `Entity` folder provides simple POCOs (`HeaderInfo` etc.) used by DAOs.
+- Livello di accesso ai dati con classi DAO come `PacgProtocolloDao` e `TransazioniDao`.
+- La cartella `Entity` fornisce semplici POCO (`HeaderInfo` ecc.) utilizzati dai DAO.
 
 ### PgadManager
-- Minimal wrapper over `PgadData` providing business logic entry points.
-- In legacy code many methods are still TODO or thin pass‑throughs.
+- È un wrapper minimale sopra `PgadData` che espone i punti di ingresso della logica di business.
+- Nel codice legacy molti metodi sono ancora TODO o semplici pass-through.
 
-## Refactoring Considerations
+## Considerazioni per il refactoring
 
-The target `NewPacg` follows the structure of **grattaevinciapi**:
+Il nuovo `NewPacg` segue la struttura di riferimento di **grattaevinciapi**:
 
 ```
 NewPacg.sln
 ├── NewPacg           (ASP.NET Core Web API)
-├── NewPacg.Common    (contracts, entities, enums)
-├── NewPacg.Data      (data access abstractions)
-├── NewPacg.Manager   (business services)
-└── NewPacg.Tests     (xUnit tests)
+├── NewPacg.Common    (contratti, entità, enum)
+├── NewPacg.Data      (astrazioni per l'accesso ai dati)
+├── NewPacg.Manager   (servizi di business)
+└── NewPacg.Tests     (test xUnit)
 ```
 
-We will progressively port functionality from `PgadCommunication`, `PGADService` and related projects into this new layout. Initial steps focus on modernising the DTOs and service contracts, followed by the data layer and business logic.
+Trasferirò progressivamente le funzionalità da `PgadCommunication`, `PGADService` e dagli altri progetti all'interno di questo nuovo layout. I primi passi riguardano la modernizzazione dei DTO e dei contratti di servizio, seguiti dal livello dati e dalla logica di business.
 
-* Use **.NET 6** and SDK‑style project files.
-* Replace WCF endpoints with ASP.NET Core Web API controllers.
-* Introduce dependency injection via `Microsoft.Extensions.DependencyInjection`.
-* Move away from packages.config to SDK project references.
-* Add thorough unit tests in `NewPacg.Tests` as components are migrated.
+* Utilizzo **.NET 6** con progetti in stile SDK.
+* Sostituisco gli endpoint WCF con controller ASP.NET Core Web API.
+* Introduco l'iniezione delle dipendenze tramite `Microsoft.Extensions.DependencyInjection`.
+* Abbandono packages.config a favore dei riferimenti tra progetti SDK.
+* Aggiungo test unitari completi in `NewPacg.Tests` man mano che migro i componenti.
 
-Further details about each legacy component will be documented in dedicated pages linked from this file as the refactoring progresses.
+Man mano che la migrazione procede, documenterò in pagine dedicate ogni componente legacy, collegate a partire da questo file.
